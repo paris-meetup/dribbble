@@ -6,7 +6,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/main.css">
-        <script src="bower_components/modernizr/modernizr.js"></script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -63,9 +62,12 @@
                       </fieldset>
 
                       <span class="separator-x"></span>
+                      <div class="hidden player-informations">
+                        <input type="text" class="user-avatar"/>
+                      </div>
 
                       <fieldset>
-                        <input type="submit" value="s'inscrire" />
+                        <input type="submit" value="s'inscrire" disabled />
                       </fieldset>
                     </form>
                   </section>
@@ -85,7 +87,8 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
 
-        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery.min.js"></script>
+        <script src="scripts/jribbble-1.0.1.min.js"></script>
         <script src="scripts/main.js"></script>
 </body>
 </html>
