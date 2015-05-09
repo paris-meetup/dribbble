@@ -105,10 +105,20 @@ fieldset {
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
+@media all and (max-width: 800px) {
+  .inscription-card {
+    padding: 15px 0 45px;
+  }
+}
 .inscription-card .card__header {
   height: 75px;
   float: left;
   width: 100%;
+}
+@media all and (max-width: 800px) {
+  .inscription-card .card__header {
+    padding: 0 16px;
+  }
 }
 .inscription-card .card__header > * {
   float: left;
