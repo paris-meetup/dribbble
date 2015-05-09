@@ -54,7 +54,7 @@ function emailDetection(){
     var emailAddress = $(this).val();
     if( !isValidEmailAddress( emailAddress ) ) { 
       $(this).closest('fieldset').addClass('done');
-      $('input[type="radio"]').prop('disabled', true);
+      $('input[type="radio"]').prop('disabled', false);
     }
   })
 }
