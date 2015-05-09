@@ -141,15 +141,19 @@ body {
   -webkit-margin-after: 0;
 }
 .inscription-card .card__form header h4 {
-  color: #dbe4f7;
-  font-weight: 300;
+  color: #b4b4b4;
+  font-weight: regular;
   -webkit-margin-before: 0;
+  font-size: 16px;
 }
 .inscription-card .card__form fieldset {
   border-color: #dbe4f7;
 }
 .inscription-card .card__form fieldset:nth-child(1), .inscription-card .card__form fieldset:nth-child(3) {
   border-bottom: none;
+}
+.inscription-card .card__form fieldset input {
+  background: red !important;
 }
 
 /* classes & generic */
