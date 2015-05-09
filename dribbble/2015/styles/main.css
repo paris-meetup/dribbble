@@ -209,7 +209,7 @@ fieldset {
 .inscription-card .form__dates {
   width: 190px;
   margin: auto;
-  padding: 0 0;
+  padding: 0 0 45px;
 }
 .inscription-card .form__dates label {
   display: block;
@@ -218,6 +218,15 @@ fieldset {
   width: 90px;
   cursor: pointer;
   padding: 0;
+}
+.inscription-card .form__dates label:after {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 90px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 90px;
 }
 .inscription-card .form__dates label[for="jeudi-25-juin"] {
   background: url("../images/svg/jeudi-off.svg") no-repeat center center;
@@ -232,9 +241,17 @@ fieldset {
   background: url("../images/svg/jeudi-on.svg") no-repeat center center;
   background-size: contain;
 }
+.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"]:after {
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
+}
 .inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"] {
   background: url("../images/svg/vendredi-on.svg") no-repeat center center;
   background-size: contain;
+}
+.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"]:after {
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
 }
 
 /* Icons*/
