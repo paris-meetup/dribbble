@@ -244,6 +244,8 @@ fieldset {
 .inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"]:after {
   background: url("../images/svg/check-icon.svg") no-repeat center center;
   background-size: 20%;
+  -webkit-animation: popIn .7s ease-in;
+  animation: popIn .7s ease-in;
 }
 .inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"] {
   background: url("../images/svg/vendredi-on.svg") no-repeat center center;
@@ -252,6 +254,23 @@ fieldset {
 .inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"]:after {
   background: url("../images/svg/check-icon.svg") no-repeat center center;
   background-size: 20%;
+  -webkit-animation: popIn .7s ease-in;
+  animation: popIn .7s ease-in;
+}
+.inscription-card input[type="submit"] {
+  width: 180px;
+  height: 60px;
+  background: #ea4c89;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+  appearance: none;
+  padding: 0;
+  margin: 45px auto 0;
+  cursor: pointer;
 }
 
 /* Icons*/
@@ -268,9 +287,41 @@ fieldset {
 /* classes & generic */
 .separator-x {
   height: 1px !important;
+  width: 100%;
+  display: block;
   background: #dbe4f7;
 }
 
 .hidden {
   display: none;
+}
+
+/* Animation */
+@-webkit-keyframes popIn {
+  0% {
+    -webkit-transform: scale(0) rotate(-45deg);
+    transform: scale(0) rotate(-45deg);
+  }
+  65% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes popIn {
+  0% {
+    -webkit-transform: scale(0) rotate(-45deg);
+    transform: scale(0) rotate(-45deg);
+  }
+  65% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
 }
