@@ -50,12 +50,18 @@ function isValidEmailAddress(emailAddress) {
 };
 
 function emailDetection(){
-  $('input[type="email"]').on('keydown keyup blur', function(){
+  $('input[type="email"]').on('blur', function(){
     var emailAddress = $(this).val();
-    if( !isValidEmailAddress( emailAddress ) ) { 
+    if( isValidEmailAddress( emailAddress ) ) { 
       $(this).closest('fieldset').addClass('done');
       $('input[type="radio"]').prop('disabled', false);
     }
+  })
+}
+
+function datePicker(){
+  $('input[type="radio"]').on('click', function(){
+      $('input[type="submit"]').prop('disabled', false);
   })
 }
 
@@ -63,6 +69,7 @@ function form(){
   addArobaze();
   getUserName();
   emailDetection();
+  datePicker();
 }
 
 function deploy(){
