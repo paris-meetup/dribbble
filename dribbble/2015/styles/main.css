@@ -164,7 +164,7 @@ fieldset {
 .inscription-card .card__form fieldset:nth-child(1),
 .inscription-card .card__form fieldset:nth-child(2) {
   padding: 0;
-  height: 70px;
+  height: 62px;
   border: 1px solid #dbe4f7;
   background: #fff;
 }
