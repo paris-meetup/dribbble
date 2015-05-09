@@ -1,0 +1,8 @@
+node_modules
+dist
+.tmp
+.sass-cache
+.htaccess
+.DS_Strore
+app/bower_components
+test/bower_components
