@@ -4,5 +4,6 @@ dist
 .sass-cache
 .htaccess
 .DS_Strore
+bower_components
 app/bower_components
 test/bower_components
