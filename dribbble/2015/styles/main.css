@@ -11,6 +11,12 @@
   box-sizing: border-box;
 }
 
+html:before {
+  content: '';
+  display: none;
+  background: url("../images/svg/check-icon.svg"), url("../images/svg/jeudi-on.svg"), url("../images/svg/vendredi-on.svg");
+}
+
 html, body {
   width: 100%;
   height: 100%;
