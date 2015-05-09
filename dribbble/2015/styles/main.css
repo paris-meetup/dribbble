@@ -1,5 +1,6 @@
 @import url(normalize.css);
 /* Colors */
+/* Mixins */
 /* Page style */
 :root {
   font-size: 16px;
@@ -147,13 +148,57 @@ body {
   font-size: 16px;
 }
 .inscription-card .card__form fieldset {
-  border-color: #dbe4f7;
+  padding: 0;
+  height: 70px;
+  border: 1px solid #dbe4f7;
+  background: #fff;
 }
-.inscription-card .card__form fieldset:nth-child(1), .inscription-card .card__form fieldset:nth-child(3) {
+.inscription-card .card__form fieldset:nth-child(1), .inscription-card .card__form fieldset:nth-child(4) {
   border-bottom: none;
 }
-.inscription-card .card__form fieldset input {
-  background: red !important;
+.inscription-card .card__form input[type="text"],
+.inscription-card .card__form input[type="email"] {
+  appearance: none;
+  width: 80%;
+  border: none;
+  height: 100%;
+  float: left;
+  position: relative;
+  display: block;
+  padding-left: .5em;
+  font-weight: regular;
+  font-size: 16px;
+}
+.inscription-card .card__form input[type="text"]::-webkit-input-placeholder, .inscription-card .card__form input[type="email"]::-webkit-input-placeholder {
+  color: #D2D8E4;
+}
+.inscription-card .card__form input[type="text"]:-moz-placeholder, .inscription-card .card__form input[type="email"]:-moz-placeholder {
+  color: #D2D8E4;
+}
+.inscription-card .card__form input[type="text"]::-moz-placeholder, .inscription-card .card__form input[type="email"]::-moz-placeholder {
+  color: #D2D8E4;
+}
+.inscription-card .card__form input[type="text"]:-ms-input-placeholder, .inscription-card .card__form input[type="email"]:-ms-input-placeholder {
+  color: #D2D8E4;
+}
+.inscription-card .card__form .icon {
+  content: '';
+  display: block;
+  float: left;
+  width: 20%;
+  height: 100%;
+  position: relative;
+}
+
+/* Icons */
+.icon-dribbble {
+  background: url("../images/svg/dribbble-icon.svg") no-repeat center center;
+  background-size: 37%;
+}
+
+.icon-email {
+  background: url("../images/svg/mail-icon.svg") no-repeat center center;
+  background-size: 37%;
 }
 
 /* classes & generic */
