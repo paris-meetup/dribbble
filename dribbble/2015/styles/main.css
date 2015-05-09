@@ -23,6 +23,10 @@ body {
   background: #f4f8ff;
 }
 
+fieldset {
+  border: none;
+}
+
 .container {
   width: 100%;
   float: left;
@@ -147,13 +151,16 @@ body {
   -webkit-margin-before: 0;
   font-size: 16px;
 }
-.inscription-card .card__form fieldset {
+.inscription-card .card__form fieldset:nth-child(1),
+.inscription-card .card__form fieldset:nth-child(2) {
   padding: 0;
   height: 70px;
   border: 1px solid #dbe4f7;
   background: #fff;
 }
-.inscription-card .card__form fieldset:nth-child(1), .inscription-card .card__form fieldset:nth-child(4) {
+.inscription-card .card__form fieldset:nth-child(1):nth-child(1), .inscription-card .card__form fieldset:nth-child(1):nth-child(4),
+.inscription-card .card__form fieldset:nth-child(2):nth-child(1),
+.inscription-card .card__form fieldset:nth-child(2):nth-child(4) {
   border-bottom: none;
 }
 .inscription-card .card__form input[type="text"],
@@ -166,7 +173,7 @@ body {
   position: relative;
   display: block;
   padding-left: .5em;
-  font-weight: regular;
+  font-weight: 500;
   font-size: 16px;
 }
 .inscription-card .card__form input[type="text"]::-webkit-input-placeholder, .inscription-card .card__form input[type="email"]::-webkit-input-placeholder {
@@ -189,6 +196,46 @@ body {
   height: 100%;
   position: relative;
 }
+.inscription-card .form__infos {
+  float: left;
+  width: 100%;
+  padding: 1em 0;
+}
+.inscription-card .form__infos p {
+  color: #474747;
+  font-weight: bold;
+  font-size: 14px;
+}
+.inscription-card .form__dates {
+  width: 190px;
+  margin: auto;
+  padding: 0 0;
+}
+.inscription-card .form__dates label {
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  padding: 0;
+}
+.inscription-card .form__dates label[for="jeudi-25-juin"] {
+  background: url("../images/svg/jeudi-off.svg") no-repeat center center;
+  background-size: contain;
+}
+.inscription-card .form__dates label[for="vendredi-26-juin"] {
+  background: url("../images/svg/vendredi-off.svg") no-repeat center center;
+  background-size: contain;
+  float: right;
+}
+.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"] {
+  background: url("../images/svg/jeudi-on.svg") no-repeat center center;
+  background-size: contain;
+}
+.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"] {
+  background: url("../images/svg/vendredi-on.svg") no-repeat center center;
+  background-size: contain;
+}
 
 /* Icons*/
 .icon-dribbble {
@@ -205,4 +252,8 @@ body {
 .separator-x {
   height: 1px !important;
   background: #dbe4f7;
+}
+
+.hidden {
+  display: none;
 }

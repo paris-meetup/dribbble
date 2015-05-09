@@ -44,7 +44,6 @@
                     </header>
                     <form>
                       <fieldset>
-
                         <span class="icon icon-dribbble"></span><input type="text" name="username" id="username" placeholder="@dribbbleUsername" required/>
                       </fieldset>
                         
@@ -56,11 +55,11 @@
                         <p>Cliquez sur les dates pour indiquer vos disponibilités</p>
                       </span>
 
-                      <fieldset>
-                        <input type="radio" name="meetup-date" id="jeudi-25-juin" value="jeudi-25-juin"/>
-                        <input type="radio" name="meetup-date" id="vendredi-26-juin" value="vendredi-26-juin"/>
-                        <label for="jeudi-25-juin">o</label>
-                        <label for="vendredi-26-juin">o</label>
+                      <fieldset class="form__dates">
+                        <input type="radio" name="meetup-date" id="jeudi-25-juin" value="jeudi-25-juin" class="hidden"/>
+                        <input type="radio" name="meetup-date" id="vendredi-26-juin" value="vendredi-26-juin" class="hidden"/>
+                        <label for="jeudi-25-juin"></label>
+                        <label for="vendredi-26-juin"></label>
                       </fieldset>
 
                       <span class="separator-x"></span>
