@@ -1,0 +1,159 @@
+@import url(normalize.css);
+/* Colors */
+/* Page style */
+:root {
+  font-size: 16px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
+  background: #f4f8ff;
+}
+
+.container {
+  width: 100%;
+  float: left;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+  float: left;
+  background: rgba(234, 76, 137, 0.8) url("../images/background.png") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+.header .header__content {
+  max-width: 550px;
+  width: 100%;
+  margin: auto;
+}
+.header .header__content .content__main-visual {
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+.header .header__content .visual__shadows {
+  width: 100%;
+  max-width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+.header .header__content .content__secondary-visual {
+  background: #f4f8ff;
+  width: 100%;
+  max-width: 80px;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.container__inscription {
+  width: 100%;
+  min-height: 200px;
+  background: #f4f8ff;
+  float: left;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.container__inscription .card__wrapper {
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+}
+
+/* Card inscription design */
+.inscription-card {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  float: left;
+  padding: 15px 90px 45px;
+  margin: 45px auto;
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.inscription-card .card__header {
+  height: 75px;
+  float: left;
+  width: 100%;
+}
+.inscription-card .card__header > * {
+  float: left;
+  display: block;
+  height: 100%;
+}
+.inscription-card .card__header .header__visual-item--1 {
+  width: 20%;
+}
+.inscription-card .card__header .header__visual-item--2 {
+  width: 20%;
+}
+.inscription-card .card__header .separator-x {
+  width: calc(60% - 32px);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  margin: 0 16px;
+}
+.inscription-card .card__form {
+  background: #fbfcfe;
+  border: 1px solid #dbe4f7;
+  padding: 45px;
+  float: left;
+  padding-top: 0;
+}
+.inscription-card .card__form header h2, .inscription-card .card__form header h3 {
+  padding: 0;
+  line-height: 1.6;
+}
+.inscription-card .card__form header h2 {
+  color: #606165;
+  font-weight: bold;
+  -webkit-margin-after: 0;
+}
+.inscription-card .card__form header h4 {
+  color: #dbe4f7;
+  font-weight: 300;
+  -webkit-margin-before: 0;
+}
+.inscription-card .card__form fieldset {
+  border-color: #dbe4f7;
+}
+.inscription-card .card__form fieldset:nth-child(1), .inscription-card .card__form fieldset:nth-child(3) {
+  border-bottom: none;
+}
+
+/* classes & generic */
+.separator-x {
+  height: 1px !important;
+  background: #dbe4f7;
+}
