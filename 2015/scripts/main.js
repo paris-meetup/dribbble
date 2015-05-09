@@ -14,6 +14,11 @@ $.fn.selectRange = function(start, end) {
   });
 };
 
+function init(){
+  $('input[type="submit"],input[type="email"],input[type="radio"]').prop('disabled', true);
+}
+
+
 function addArobaze(){
   $('input[type="text"]').on('click', function(){
     if(!$(this).val()){
@@ -22,23 +27,25 @@ function addArobaze(){
     }
   })
 }
-function getUserName(){
 
+function getUserName(){
   $('input[type="text"]').on('keyup keydown blur', function(){
     var _t = $(this);
     var _tval = _t.val();
     var _userName = _t.val().replace('@','');
-
-    fetchUserInformations(_userName)
+    fetchUserInformations(_userName);
   });
 };
 function fetchUserInformations(_name){
   $.jribbble.getPlayerById(_name, function (player) {
-    $('.user-avatar').attr('value', player.avatar_url );
+    $('#detector').attr('value', player.avatar_url );
+    $('input[type="text"]').closest('fieldset').addClass('done')
+    $('input[type="email"]').prop('disabled', false)
   });
 };
 
 function deploy(){
+  init();
   addArobaze();
   getUserName();
 };

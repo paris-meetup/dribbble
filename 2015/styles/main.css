@@ -423,6 +423,10 @@ body {
   background: #f4f8ff;
 }
 
+form {
+  position: relative;
+}
+
 fieldset {
   border: none;
 }
@@ -734,4 +738,19 @@ fieldset {
     -webkit-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg);
   }
+}
+.done:after {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 90px;
+  position: absolute;
+  right: 0;
+  margin-right: -12px;
+  margin-top: 18px;
+  z-index: 2;
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
+  -webkit-animation: popIn .7s ease-in;
+  animation: popIn .7s ease-in;
 }
