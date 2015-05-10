@@ -708,6 +708,22 @@ fieldset {
   margin: 45px auto 0;
   cursor: pointer;
 }
+.inscription-card .user-subscribed {
+  width: 100%;
+  height: 160px;
+  float: left;
+}
+.inscription-card .user-subscribed img {
+  border-radius: 100%;
+  width: 100%;
+  max-width: 100px;
+  display: block;
+  margin: auto;
+}
+.inscription-card .user-subscribed .user-pseudo {
+  font-weight: bold;
+  line-height: 4;
+}
 .inscription-card .user-list {
   width: 100%;
   float: left;
@@ -748,6 +764,7 @@ fieldset {
   height: 1px !important;
   width: 100%;
   display: block;
+  float: left;
   background: #dbe4f7;
 }
 
