@@ -13,10 +13,32 @@
   <meta property="og:site_name" content="Dribbble Paris Meetup - #1"/>
   <meta property="og:url" content="http://dribbble.paris-meetup.com/2015" />
   <meta property="og:image" content="images/og_image.png" />
+  <meta property="fb:app_id" content="[FB_APP_ID]" />
+  <meta property="og:type" content="article" />
+  <meta property="og:locale:alternate" content="fr_FR" /> 
+  <meta property="article:author" content="https://www.facebook.com/fareedzakaria" />
+  <meta property="article:publisher" content="https://www.facebook.com/cnn" />
 
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1583132091955950',
+        xfbml      : true,
+        version    : 'v2.3'
+      });
+    };
+
+    (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  </script>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
