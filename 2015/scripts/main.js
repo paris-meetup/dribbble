@@ -2,7 +2,7 @@
 
 
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
-var _isDisabled = false;
+var _isDisabled = true;
 
 
 $.fn.selectRange = function(start, end) {
