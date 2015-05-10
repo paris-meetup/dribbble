@@ -419,8 +419,31 @@ html, body {
 }
 
 body {
-  font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
+  font-family: "Helvetica Neue Regular", Arial Narrow, helvetica, sans-serif;
   background: #f4f8ff;
+}
+
+h1, h3, h4, h5 {
+  font-family: "Helvetica Neue Regular", Arial Narrow, helvetica, sans-serif;
+}
+
+h2 {
+  font-family: "Helvetica Neue Bold", Arial Narrow, helvetica, sans-serif;
+}
+
+h4, h5 {
+  font-weight: 600;
+  color: #9aa6c1;
+  font-size: 16px;
+}
+
+h5 {
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 form {
@@ -549,6 +572,7 @@ fieldset {
   padding: 45px;
   float: left;
   padding-top: 0;
+  width: 100%;
 }
 .inscription-card .card__form header h2, .inscription-card .card__form header h3 {
   padding: 0;
@@ -560,8 +584,6 @@ fieldset {
   -webkit-margin-after: 0;
 }
 .inscription-card .card__form header h4 {
-  color: #b4b4b4;
-  font-weight: regular;
   -webkit-margin-before: 0;
   font-size: 16px;
 }
@@ -685,6 +707,29 @@ fieldset {
   padding: 0;
   margin: 45px auto 0;
   cursor: pointer;
+}
+.inscription-card .user-list {
+  width: 100%;
+  float: left;
+}
+.inscription-card .user-list ul li {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.inscription-card .user-list ul li:after {
+  display: block;
+  content: '';
+  background: #DBE4F7;
+  width: 4px;
+  height: 4px;
+  position: absolute;
+}
+.inscription-card footer {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 1em auto 0;
 }
 
 /* Icons*/

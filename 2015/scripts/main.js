@@ -1,3 +1,5 @@
+var _isDisabled = false;
+
 $.fn.selectRange = function(start, end) {
   if(!end) end = start; 
   return this.each(function() {
@@ -15,7 +17,7 @@ $.fn.selectRange = function(start, end) {
 };
 
 function init(){
-  $('input[type="submit"],input[type="email"],input[type="radio"]').prop('disabled', true);
+  $('input[type="submit"],input[type="email"],input[type="checkbox"]').prop('disabled', _isDisabled);
 }
 
 
@@ -54,15 +56,32 @@ function emailDetection(){
     var emailAddress = $(this).val();
     if( isValidEmailAddress( emailAddress ) ) { 
       $(this).closest('fieldset').addClass('done');
-      $('input[type="radio"]').prop('disabled', false);
+      $('input[type="checkbox"]').prop('disabled', false);
     }
   })
 }
 
 function datePicker(){
-  $('input[type="radio"]').on('click', function(){
+  $('input[type="checkbox"]').on('click', function(){
       $('input[type="submit"]').prop('disabled', false);
   })
+}
+
+function confirmFirstStep(){
+  $('input[type="submit"]').on('click', function(){
+    $("#inscription").addClass('hidden');
+    $("#thankyou").removeClass('hidden');
+
+    setupThankyou();
+  })
+
+  function setupThankyou(){
+    var userName = $('input[type="text"]').val();
+    var userImage = $('#detector').val();
+
+    $('#userName').empty().append(userName);
+    $('#userImage').attr('src', userImage);
+  }
 }
 
 function form(){
@@ -70,6 +89,7 @@ function form(){
   getUserName();
   emailDetection();
   datePicker();
+  confirmFirstStep();
 }
 
 function deploy(){

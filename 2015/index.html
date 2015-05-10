@@ -1,94 +1,144 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>paris meetup</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
+<head>
+  <meta charset="utf-8">
+  <title>paris meetup</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+            <![endif]-->
 
-        <div class="container">
+            <div class="container">
 
-            <div class="header">
-               
+              <div class="header">
+
                <div class="header__content">
                  <img src="images/svg/paris.svg" title="Paris" alt="Pairs" class="content__main-visual"/>
-                  <div class="visual__shadows"></div>
-                  <div class="content__secondary-visual">
-                    <img src="images/svg/dribbble-badge.svg" title="Dribbble badge" alt="Dribbble badge"  />
-                  </div>
-               </div>
+                 <div class="visual__shadows"></div>
+                 <div class="content__secondary-visual">
+                  <img src="images/svg/dribbble-badge.svg" title="Dribbble badge" alt="Dribbble badge"  />
+                </div>
+              </div>
 
             </div>
 
             <div class="container__inscription">
-              
+
               <div class="card__wrapper">
                 <div class="inscription-card">
+
                   <header class="card__header">
                     <img src="images/svg/dribbble.svg" alt="Dribbble logo" class="header__visual-item--1">
                     <span class="separator-x"></span>
                     <img src="images/svg/meetup.svg" alt="Meetup mention" class="header__visual-item--2">
                   </header>
 
-                  <section class="card__form">
-                    <header>
-                      <h2>Inscription</h2>
-                      <h4>Places limitées</h4>
-                    </header>
-                    <form>
-                      <fieldset>
-                        <span class="icon icon-dribbble"></span><input type="text" name="username" id="username" placeholder="@dribbbleUsername" required/>
-                      </fieldset>
+
+                  <div id="inscription" >
+
+
+                    <section class="card__form">
+                      <header>
+                        <h2>Inscription</h2>
+                        <h4>Places limitées</h4>
+                      </header>
+                      <form>
+                        <fieldset>
+                          <span class="icon icon-dribbble"></span><input type="text" name="username" id="username" placeholder="@dribbbleUsername" required/>
+                        </fieldset>
                         
-                      <fieldset>
-                        <span class="icon icon-email"></span><input type="email" name="email" id="email" placeholder="hello@youremail.com" required/>
-                      </fieldset>
+                        <fieldset>
+                          <span class="icon icon-email"></span><input type="email" name="email" id="email" placeholder="hello@youremail.com" required/>
+                        </fieldset>
 
-                      <span class="form__infos">
-                        <p>Cliquez sur les dates pour indiquer vos disponibilités</p>
-                      </span>
+                        <span class="form__infos">
+                          <p>Cliquez sur les dates pour indiquer vos disponibilités</p>
+                        </span>
 
-                      <fieldset class="form__dates">
-                        <input type="radio" name="meetup-date" id="jeudi-25-juin" value="jeudi-25-juin" class="hidden"/>
-                        <input type="radio" name="meetup-date" id="vendredi-26-juin" value="vendredi-26-juin" class="hidden"/>
-                        <label for="jeudi-25-juin"></label>
-                        <label for="vendredi-26-juin"></label>
-                      </fieldset>
+                        <fieldset class="form__dates">
+                          <input type="checkbox" name="meetup-date" id="jeudi-25-juin" value="jeudi-25-juin" class="hidden"/>
+                          <input type="checkbox" name="meetup-date" id="vendredi-26-juin" value="vendredi-26-juin" class="hidden"/>
+                          <label for="jeudi-25-juin"></label>
+                          <label for="vendredi-26-juin"></label>
+                        </fieldset>
 
+                        <span class="separator-x"></span>
+                        <div class="hidden player-informations">
+                          <input type="text" class="user-avatar" id="detector" value="notADribbblePlayer"/>
+                        </div>
+
+                        <fieldset>
+                          <input type="submit" value="s'inscrire"/>
+                        </fieldset>
+                      </form>
+                    </section>
+                  </div>
+
+                  <div id="thankyou" class="hidden">
+
+                    <section class="card__form">
+                      <header>
+                        <h2>Merci, <span id="userName"></span></h2>
+                        <h4>Nous vous tiendrons informés de la date et du lieu par email.</h4>
+
+                        <div class="user-subscribed">
+                          <img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar" id="userImage">
+                          <span class="user-pseudo"></span>
+                        </div>
+                      </header>
                       <span class="separator-x"></span>
-                      <div class="hidden player-informations">
-                        <input type="text" class="user-avatar" id="detector" value="notADribbblePlayer"/>
-                      </div>
+                      <section>
+                        <header>
+                          <h5>Déjà <span id="total-subscribed">48</span> inscrits</h5>
+                        </header>
+                        <div class="user-list">
+                          <ul>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                            <li><img src="images/svg/dribbble-badge.svg" alt="{{user.name}} avatar"></li>
+                          </ul>
+                        </div>
 
-                      <fieldset>
-                        <input type="submit" value="s'inscrire"/>
-                      </fieldset>
-                    </form>
-                  </section>
+                        <footer>
+                          <a href="#">Voir tous ...</a>
+                        </footer>
+                      </section>
+
+                    </section>
+                  </div>
 
                 </div>
               </div>
               
             </div>
-        </div>
+          </div>
 
-        <script>
+          <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+              function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+          </script>
 
-        <script src="scripts/jquery.min.js"></script>
-        <script src="scripts/jribbble-1.0.1.min.js"></script>
-        <script src="scripts/main.js"></script>
-</body>
-</html>
+          <script src="scripts/jquery.min.js"></script>
+          <script src="scripts/jribbble-1.0.1.min.js"></script>
+          <script src="scripts/main.js"></script>
+        </body>
+        </html>
