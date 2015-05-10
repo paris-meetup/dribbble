@@ -1,4 +1,4 @@
-var _isDisabled = true;
+var _isDisabled = false;
 
 $.fn.selectRange = function(start, end) {
   if(!end) end = start; 
