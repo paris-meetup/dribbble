@@ -419,16 +419,16 @@ html, body {
 }
 
 body {
-  font-family: "Helvetica Neue Regular", Arial Narrow, helvetica, sans-serif;
+  font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
   background: #f4f8ff;
 }
 
 h1, h3, h4, h5 {
-  font-family: "Helvetica Neue Regular", Arial Narrow, helvetica, sans-serif;
+  font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
 }
 
 h2 {
-  font-family: "Helvetica Neue Bold", Arial Narrow, helvetica, sans-serif;
+  font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
 }
 
 h4, h5 {
