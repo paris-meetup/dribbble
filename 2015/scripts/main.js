@@ -29,10 +29,15 @@ function init(){
     if ($.cookie('alreadyIn')=='1') {
       $('fieldset').css('border-color', dbbbColor);
       $('.separator-x').css('background-color', dbbbColor);
-      $('input[type="button"]').parent().prepend('<h2 style="color:'+dbbbColor+'">You are already in the list</h2>');
+      $('input[type="button"]').parent().prepend('<h2 style="color:'+dbbbColor+'">Vous êtes déjà inscrit</h2>');
       $('input[type="button"').remove();
     }
   }, 100);
+
+  console.log('Dribbble Paris Meetup <http://dribbble.paris-meetup.com>')
+  console.log('Coded with love, by @LukyVj <lucas.bonomi@gmail.com>')
+  console.log('Design by @KevinCdnc <Kevin.cudennec@gmail.com>')
+  console.log('A Rocket-Design collaboration <http://rocket-design.fr>')
 }
 
 
