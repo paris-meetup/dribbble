@@ -693,7 +693,7 @@ fieldset {
   -webkit-animation: popIn .7s ease-in;
   animation: popIn .7s ease-in;
 }
-.inscription-card input[type="submit"] {
+.inscription-card input[type="button"] {
   width: 180px;
   height: 60px;
   background: #ea4c89;
