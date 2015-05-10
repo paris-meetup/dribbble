@@ -489,6 +489,8 @@ fieldset {
   padding: 1em;
   border-radius: 100%;
   box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  -webkit-animation: breath 5s ease-out infinite;
+  animation: breath 5s ease-out infinite;
   position: absolute;
   left: 0;
   right: 0;
@@ -778,7 +780,7 @@ fieldset {
     -webkit-transform: scale(0) rotate(-45deg);
     transform: scale(0) rotate(-45deg);
   }
-  65% {
+  66% {
     -webkit-transform: scale(1.2) rotate(15deg);
     transform: scale(1.2) rotate(15deg);
   }
@@ -792,13 +794,41 @@ fieldset {
     -webkit-transform: scale(0) rotate(-45deg);
     transform: scale(0) rotate(-45deg);
   }
-  65% {
+  66% {
     -webkit-transform: scale(1.2) rotate(15deg);
     transform: scale(1.2) rotate(15deg);
   }
   100% {
     -webkit-transform: scale(1) rotate(0deg);
     transform: scale(1) rotate(0deg);
+  }
+}
+@-webkit-keyframes breath {
+  0% {
+    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  }
+  33% {
+    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.4), 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+  }
+  66% {
+    box-shadow: 0 0 0 1.4em rgba(255, 255, 255, 0.4), 0 0 0 1em rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  }
+}
+@keyframes breath {
+  0% {
+    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  }
+  33% {
+    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.4), 0 0 0 0.4em rgba(255, 255, 255, 0.4);
+  }
+  66% {
+    box-shadow: 0 0 0 1.4em rgba(255, 255, 255, 0.4), 0 0 0 1em rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
   }
 }
 .done:after {
