@@ -17,7 +17,7 @@ $.fn.selectRange = function(start, end) {
 };
 
 function init(){
-  $('input[type="submit"],input[type="email"],input[type="checkbox"]').prop('disabled', _isDisabled);
+  $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', _isDisabled);
 }
 
 
@@ -63,12 +63,12 @@ function emailDetection(){
 
 function datePicker(){
   $('input[type="checkbox"]').on('click', function(){
-      $('input[type="submit"]').prop('disabled', false);
+      $('input[type="button"]').prop('disabled', false);
   })
 }
 
 function confirmFirstStep(){
-  $('input[type="submit"]').on('click', function(){
+  $('input[type="button"]').on('click', function(){
     $("#inscription").addClass('hidden');
     $("#thankyou").removeClass('hidden');
 
