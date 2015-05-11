@@ -3,6 +3,7 @@
 
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
 var _isDisabled = true;
+var openAccess = true;
 
 
 $.fn.selectRange = function(start, end) {
@@ -132,7 +133,9 @@ function confirmFirstStep(){
     myDataRef.push({name: userName, avatar: userImage, email: userEmail, dates: selectedDates });
 
     // Set a cookie to avoid the user to readd his email
-    $.cookie('alreadyIn', '1', { expires: 365 });
+    if(!openAccess){
+       $.cookie('alreadyIn', '1', { expires: 365 });
+    }
   }
 }
 
