@@ -2,7 +2,7 @@
 
 
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
-var _isDisabled = true;
+//var _isDisabled = true;
 var inDevelopement = true;
 
 
@@ -24,7 +24,10 @@ $.fn.selectRange = function(start, end) {
 
 function init(){
   var dbbbColor = $('input[type="button"]').css('background-color');
-  $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', _isDisabled);
+  
+  if(!inDevelopement){
+    $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
+  }
 
   setTimeout(function(){
     if ($.cookie('alreadyIn')=='1') {
