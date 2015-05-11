@@ -3,7 +3,7 @@
 
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
 var _isDisabled = true;
-var inProduction = true;
+var inDevelopement = false;
 
 
 $.fn.selectRange = function(start, end) {
@@ -129,7 +129,7 @@ function confirmFirstStep(){
     $('#userName').empty().append(userName);
     $('#userImage').attr('src', userImage);
 
-    if(!inProduction){
+    if(!inDevelopement){
     // Push user data to firebase 
     myDataRef.push({name: userName, avatar: userImage, email: userEmail, dates: selectedDates });
 
