@@ -30,7 +30,10 @@ function init(){
       $('fieldset').css('border-color', dbbbColor);
       $('.separator-x').css('background-color', dbbbColor);
       $('input[type="button"]').parent().prepend('<h2 style="color:'+dbbbColor+'">Vous êtes déjà inscrit</h2>');
-      $('input[type="button"').remove();
+      $('input[type="button"]').prop('disabled', true).remove();
+      setTimeout(function(){
+         $('input[type="button"').remove();
+       }, 50)
     }
   }, 100);
 
