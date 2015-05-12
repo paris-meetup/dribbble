@@ -40,9 +40,9 @@ $.fn.selectRange = function(start, end) {
 function init(){
   var dbbbColor = $('input[type="button"]').css('background-color');
   
-  if(!inDevelopement){
+  
     $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
-  }
+  
 
   setTimeout(function(){
     if ($.cookie('alreadyIn')=='1') {
