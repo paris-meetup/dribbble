@@ -454,6 +454,18 @@ fieldset {
   border: none;
 }
 
+input:invalid {
+  border-color: #ea4c89;
+}
+
+input:-moz-submit-invalid {
+  border-color: #ea4c89;
+}
+
+input:-moz-ui-invalid {
+  border-color: #ea4c89;
+}
+
 .container {
   width: 100%;
   float: left;
@@ -489,8 +501,6 @@ fieldset {
   padding: 1em;
   border-radius: 100%;
   box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
-  -webkit-animation: breath 5s ease-out infinite;
-  animation: breath 5s ease-out infinite;
   position: absolute;
   left: 0;
   right: 0;
@@ -528,7 +538,7 @@ fieldset {
   height: auto;
   max-width: 640px;
   float: left;
-  padding: 15px 90px 45px;
+  padding: 15px 45px 45px;
   margin: 45px auto;
   background: #ffffff;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
@@ -552,13 +562,16 @@ fieldset {
 .inscription-card .card__header > * {
   float: left;
   display: block;
+  position: relative;
   height: 100%;
 }
 .inscription-card .card__header .header__visual-item--1 {
   width: 20%;
+  top: -3px;
 }
 .inscription-card .card__header .header__visual-item--2 {
-  width: 20%;
+  width: 18%;
+  padding: 0 1%;
 }
 .inscription-card .card__header .separator-x {
   width: calc(60% - 32px);
@@ -588,6 +601,9 @@ fieldset {
 .inscription-card .card__form header h4 {
   -webkit-margin-before: 0;
   font-size: 16px;
+  position: relative;
+  width: calc(100% + 6em);
+  left: -3em;
 }
 .inscription-card .card__form fieldset:nth-child(1),
 .inscription-card .card__form fieldset:nth-child(2) {
@@ -698,8 +714,8 @@ fieldset {
 .inscription-card input[type="button"] {
   width: 180px;
   height: 60px;
-  background: #ea4c89;
-  color: #fff;
+  background: transparent;
+  color: #dbe4f7;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
@@ -709,6 +725,13 @@ fieldset {
   padding: 0;
   margin: 45px auto 0;
   cursor: pointer;
+  border: 1px solid #dbe4f7;
+  transition: border-color .3s ease, color .3s ease .1s , background .3s ease .2s;
+}
+.inscription-card input[type="button"].activated {
+  border-color: #f4f8ff;
+  color: #fff;
+  background: #ea4c89;
 }
 .inscription-card .user-subscribed {
   width: 100%;
@@ -721,6 +744,13 @@ fieldset {
   max-width: 100px;
   display: block;
   margin: auto;
+  box-shadow: 0 0 0 1px #dbe4f7;
+  transition: -webkit-transform .5s ease .3s;
+  transition: transform .5s ease .3s;
+}
+.inscription-card .user-subscribed img:not(.twisted) {
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
 }
 .inscription-card .user-subscribed .user-pseudo {
   font-weight: bold;
@@ -731,7 +761,7 @@ fieldset {
   float: left;
   height: 210px;
   transition: height .6s ease;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 .inscription-card .user-list.open {
   height: auto;
@@ -755,6 +785,7 @@ fieldset {
   max-width: 55px;
   display: block;
   margin: auto;
+  box-shadow: 0 0 0 1px #dbe4f7;
 }
 .inscription-card .user-list ul li:after {
   display: block;
@@ -792,6 +823,13 @@ fieldset {
 .inscription-card .subscribed-zone {
   float: left;
 }
+.inscription-card #total-subscriber {
+  opacity: 0;
+  transition: opacity .1s ease;
+}
+.inscription-card #showMore {
+  display: none;
+}
 .inscription-card #load .card__form {
   min-height: 280px;
 }
@@ -825,6 +863,11 @@ fieldset {
   transition: opacity .3s ease, display 0s ease .3s;
 }
 
+.twisted {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
 /* Animation */
 @-webkit-keyframes popIn {
   0% {
@@ -854,34 +897,6 @@ fieldset {
     transform: scale(1) rotate(0deg);
   }
 }
-@-webkit-keyframes breath {
-  0% {
-    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
-  }
-  33% {
-    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.4), 0 0 0 0.4em rgba(255, 255, 255, 0.4);
-  }
-  66% {
-    box-shadow: 0 0 0 1.4em rgba(255, 255, 255, 0.4), 0 0 0 1em rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
-  }
-}
-@keyframes breath {
-  0% {
-    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
-  }
-  33% {
-    box-shadow: 0 0 0 1em rgba(255, 255, 255, 0.4), 0 0 0 0.4em rgba(255, 255, 255, 0.4);
-  }
-  66% {
-    box-shadow: 0 0 0 1.4em rgba(255, 255, 255, 0.4), 0 0 0 1em rgba(255, 255, 255, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
-  }
-}
 .loader {
   height: 60px;
   width: 60px;
@@ -899,11 +914,14 @@ fieldset {
 @-webkit-keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
+
 @keyframes rotation {
   from {
     -webkit-transform: rotate(0deg);
@@ -928,4 +946,60 @@ fieldset {
   background-size: 20%;
   -webkit-animation: popIn .7s ease-in;
   animation: popIn .7s ease-in;
+}
+
+/* Tooltip */
+.tooltip {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -20px;
+  margin-top: 15px;
+  opacity: 0;
+  padding: 8px 16px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 90;
+  width: auto;
+  -webkit-transform: translateY(80px);
+  transform: translateY(80px);
+  transition: all .25s ease-out;
+  border-radius: 4px;
+}
+.tooltip a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+/* CSS Triangles - see Trevor's post */
+.tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid rgba(0, 0, 0, 0.75) 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+
+.user-list li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px) translateZ(200px);
+  transform: translateY(0px) translateZ(200px);
 }
