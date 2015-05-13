@@ -1,12 +1,27 @@
 !function(e){"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof exports?module.exports=e(require("jquery")):e(jQuery)}(function(e){function n(e){return u.raw?e:encodeURIComponent(e)}function o(e){return u.raw?e:decodeURIComponent(e)}function i(e){return n(u.json?JSON.stringify(e):String(e))}function t(e){0===e.indexOf('"')&&(e=e.slice(1,-1).replace(/\\"/g,'"').replace(/\\\\/g,"\\"));try{return e=decodeURIComponent(e.replace(c," ")),u.json?JSON.parse(e):e}catch(n){}}function r(n,o){var i=u.raw?n:t(n);return e.isFunction(o)?o(i):i}var c=/\+/g,u=e.cookie=function(t,c,s){if(arguments.length>1&&!e.isFunction(c)){if(s=e.extend({},u.defaults,s),"number"==typeof s.expires){var a=s.expires,d=s.expires=new Date;d.setMilliseconds(d.getMilliseconds()+864e5*a)}return document.cookie=[n(t),"=",i(c),s.expires?"; expires="+s.expires.toUTCString():"",s.path?"; path="+s.path:"",s.domain?"; domain="+s.domain:"",s.secure?"; secure":""].join("")}for(var f=t?void 0:{},p=document.cookie?document.cookie.split("; "):[],l=0,m=p.length;m>l;l++){var x=p[l].split("="),g=o(x.shift()),j=x.join("=");if(t===g){f=r(j,c);break}t||void 0===(j=r(j))||(f[g]=j)}return f};u.defaults={},e.removeCookie=function(n,o){return e.cookie(n,"",e.extend({},o,{expires:-1})),!e.cookie(n)}});
-
+function freshStyle(stylesheet){
+  setTimeout(function(){
+    $('#list').attr('href',stylesheet);
+  } , 150)
+}
+var inDevelopement = false;
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
+var restyled = 'styles/over-list.css'; 
 
+var onComplete = function(error) {
+  if (error) {
+    console.log('Synchronization failed');
+  } else {
+    console.log('Synchronization succeeded');
+  }
+};
 function loadBase(){
   // Attach an asynchronous callback to read the data at our posts reference
   myDataRef.on("child_added", function(snapshot) {
     var atendee = snapshot.val();
     $('.user-list ul').append('<li><a href="http://dribbble.com/'+ atendee.name.replace('@','') +'" target="_blank"><img src="'+ atendee.avatar + '" /></a></li>');
+    freshStyle(restyled);
+    getAtendeeLength()
   }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
   });
@@ -17,7 +32,6 @@ function getAtendeeLength(){
   $('#total-subscribed').empty().append(num)
 }
 
-var inDevelopement = false;
 
 
 $.fn.selectRange = function(start, end) {
@@ -37,20 +51,36 @@ $.fn.selectRange = function(start, end) {
 };
 
 function init(){
-  var dbbbColor = $('input[type="button"]').css('background-color');
+  var dbbbColor = '#ea4c89';
 
-    $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
+  $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
   
 
   setTimeout(function(){
     if ($.cookie('alreadyIn')=='1') {
-      $('fieldset').css('border-color', dbbbColor);
-      $('.separator-x').css('background-color', dbbbColor);
-      $('input[type="button"]').parent().prepend('<h2 style="color:'+dbbbColor+'">Vous êtes déjà inscrit</h2>');
+
+      $('#inscription').remove();
+      $('#thankyou').removeClass('hidden');
+      $(".user-subscribed img").removeClass('twisted');
+
+      $('#userImage').attr('src', $.cookie('userImage'));
+      $('#userName').empty().append($.cookie('userName'));
+
+      loadBase();
+
+      setTimeout(function(){
+       var num = $('.user-list li').length;
+       $('#total-subscribed').css('opacity','1').empty().append(num)
+       if(num>15){
+        $('#showMore').css('display','block')
+      }
+    }, 500)
+
       $('input[type="button"]').prop('disabled', true).remove();
       setTimeout(function(){
        $('input[type="button"').remove();
      }, 50)
+      
     }
   }, 100);
 
@@ -153,17 +183,19 @@ function confirmFirstStep(){
 
     // Set a cookie to avoid the user to readd his email
     $.cookie('alreadyIn', '1', { expires: 365 });
+    $.cookie('userName', userName , { expires: 365 });
+    $.cookie('userImage', userImage , { expires: 365 });
 
     setTimeout(function(){
       loadBase();
     }, 200);
-     setTimeout(function(){
-       var num = $('.user-list li').length;
-        $('#total-subscribed').css('opacity','1').empty().append(num)
-        if(num>15){
-          $('#showMore').css('display','block')
-        }
-     }, 500)
+    setTimeout(function(){
+     var num = $('.user-list li').length;
+     $('#total-subscribed').css('opacity','1').empty().append(num)
+     if(num>15){
+      $('#showMore').css('display','block')
+    }
+  }, 500)
   }
 }
 }

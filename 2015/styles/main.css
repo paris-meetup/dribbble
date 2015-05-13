@@ -454,18 +454,6 @@ fieldset {
   border: none;
 }
 
-input:invalid {
-  border-color: #ea4c89;
-}
-
-input:-moz-submit-invalid {
-  border-color: #ea4c89;
-}
-
-input:-moz-ui-invalid {
-  border-color: #ea4c89;
-}
-
 .container {
   width: 100%;
   float: left;
@@ -822,6 +810,7 @@ input:-moz-ui-invalid {
 }
 .inscription-card .subscribed-zone {
   float: left;
+  width: 100%;
 }
 .inscription-card #total-subscriber {
   opacity: 0;
