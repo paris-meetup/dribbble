@@ -11,9 +11,20 @@ function inputIndex(){
     $(this).attr('tabindex',i);
   })
 }
+
 var inDevelopement = false;
-var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
+var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/atendees');
 var restyled = 'styles/over-list.css'; 
+
+function tokenize(){
+  var url = 'https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=';
+  var rand =  Math.random().toString(36).substr(2);
+  var now = Date.now().toString(36).substr(2);
+  var token = rand + rand + now;
+  var securl = url + token;
+  $('#ponytag').attr('value', securl );
+}
+
 
 var onComplete = function(error) {
   if (error) {
@@ -62,7 +73,6 @@ function init(){
   var dbbbColor = '#ea4c89';
   $('#showMore').css('display','block !important')
   $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
-  
 
   setTimeout(function(){
     if ($.cookie('alreadyIn')=='1') {
@@ -80,7 +90,7 @@ function init(){
       setTimeout(function(){
        $('input[type="button"').remove();
        var num = $('.user-list li').length;
-      $('#total-subscribed').css('opacity','1').empty().append(num)
+       $('#total-subscribed').css('opacity','1').empty().append(num)
 
        if(num>15){
         $('#showMore').css('display','block !important')
@@ -94,10 +104,10 @@ function init(){
     }
   }, 100);
 
-console.log('Dribbble Paris Meetup <http://dribbble.paris-meetup.com>')
-console.log('Coded with love, by @LukyVj <lucas.bonomi@gmail.com>')
-console.log('Design by @KevinCdnc <Kevin.cudennec@gmail.com>')
-console.log('A Rocket-Design collaboration <http://rocket-design.fr>')
+  console.log('Dribbble Paris Meetup <http://dribbble.paris-meetup.com>')
+  console.log('Coded with love, by @LukyVj <lucas.bonomi@gmail.com>')
+  console.log('Design by @KevinCdnc <Kevin.cudennec@gmail.com>')
+  console.log('A Rocket-Design collaboration <http://rocket-design.fr>')
 }
 
 
@@ -129,6 +139,30 @@ function fetchUserInformations(_name){
 function isValidEmailAddress(emailAddress) {
   var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
   return pattern.test(emailAddress);
+};
+function ponyTail(){
+  $.ajax({
+    type: 'POST',
+  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+  data: {
+    'key': 'Ue5cb6wINC5oMkQ8LRISSQ',
+    'message': {
+      'from_email': 'hello@rocket-design.fr',
+      'to': [
+      {
+        'email': $('input[type="email"]').val(),
+        'name': $('input[type="text"]').val(),
+        'type': 'to'
+      }
+      ],
+      'autotext': 'true',
+      'subject': 'QR Code | Paris Dribbble Meetup',
+      'html': 'Hi, thank you for registering to the Paris Dribbble Meetup #1. Here is the link to your unique personal QRCode : '+$('#ponytag').val()+' . You have to get it in order to participate to the meetup.'
+    }
+  }
+}).done(function(response) {
+   console.log(response); // if you're into that sorta thing
+ });
 };
 
 function emailDetection(){
@@ -165,10 +199,10 @@ function confirmFirstStep(){
   $('input[type="button"]').on('click', function(e){
     e.preventDefault();
 
-
     $("#inscription").addClass('hidden');
     $("#load").removeClass('hidden');
 
+    tokenize();
     setTimeout(function(){
       $("#thankyou").removeClass('hidden');
       $(".user-subscribed img").removeClass('twisted');
@@ -182,6 +216,7 @@ function confirmFirstStep(){
     var userName = $('input[type="text"]').val();
     var userEmail = $('input[type="email"]').val();
     var userImage = $('#detector').val();
+    var uniqueUrl = $('#ponytag').val();
     var selectedDates = $('#dates').val();
 
     $('#userName').empty().append(userName);
@@ -189,12 +224,14 @@ function confirmFirstStep(){
 
     if(!inDevelopement){
     // Push user data to firebase 
-    myDataRef.push({name: userName, avatar: userImage, email: userEmail, dates: selectedDates });
+    myDataRef.push({name: userName, avatar: userImage, email: userEmail, dates: selectedDates,qrCode: uniqueUrl   });
 
     // Set a cookie to avoid the user to readd his email
     $.cookie('alreadyIn', '1', { expires: 365 });
     $.cookie('userName', userName , { expires: 365 });
     $.cookie('userImage', userImage , { expires: 365 });
+
+    ponyTail();
 
     setTimeout(function(){
       loadBase();
@@ -238,6 +275,8 @@ function showMore(){
     }
   })
 }
+
+
 
 function form(){
   inputIndex();
