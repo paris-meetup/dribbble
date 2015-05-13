@@ -4,6 +4,13 @@ function freshStyle(stylesheet){
     $('#list').attr('href',stylesheet);
   } , 150)
 }
+function inputIndex(){
+  var i = 0;
+  $('input').each(function(){
+    i++;
+    $(this).attr('tabindex',i);
+  })
+}
 var inDevelopement = false;
 var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/');
 var restyled = 'styles/over-list.css'; 
@@ -22,6 +29,7 @@ function loadBase(){
     $('.user-list ul').append('<li><a href="http://dribbble.com/'+ atendee.name.replace('@','') +'" target="_blank"><img src="'+ atendee.avatar + '" /></a></li>');
     freshStyle(restyled);
     getAtendeeLength()
+
   }, function (errorObject) {
     console.log("The read failed: " + errorObject.code);
   });
@@ -52,13 +60,13 @@ $.fn.selectRange = function(start, end) {
 
 function init(){
   var dbbbColor = '#ea4c89';
-
+  $('#showMore').css('display','block !important')
   $('input[type="button"],input[type="email"],input[type="checkbox"]').prop('disabled', true);
   
 
   setTimeout(function(){
     if ($.cookie('alreadyIn')=='1') {
-
+      $('body').addClass('washere')
       $('#inscription').remove();
       $('#thankyou').removeClass('hidden');
       $(".user-subscribed img").removeClass('twisted');
@@ -68,31 +76,33 @@ function init(){
 
       loadBase();
 
-      setTimeout(function(){
-       var num = $('.user-list li').length;
-       $('#total-subscribed').css('opacity','1').empty().append(num)
-       if(num>15){
-        $('#showMore').css('display','block')
-      }
-    }, 500)
-
       $('input[type="button"]').prop('disabled', true).remove();
       setTimeout(function(){
        $('input[type="button"').remove();
-     }, 50)
+       var num = $('.user-list li').length;
+      $('#total-subscribed').css('opacity','1').empty().append(num)
+
+       if(num>15){
+        $('#showMore').css('display','block !important')
+      }
+      else{
+        $('#showMore').css('display','none')
+      }
+
+    }, 150)
       
     }
   }, 100);
 
-  console.log('Dribbble Paris Meetup <http://dribbble.paris-meetup.com>')
-  console.log('Coded with love, by @LukyVj <lucas.bonomi@gmail.com>')
-  console.log('Design by @KevinCdnc <Kevin.cudennec@gmail.com>')
-  console.log('A Rocket-Design collaboration <http://rocket-design.fr>')
+console.log('Dribbble Paris Meetup <http://dribbble.paris-meetup.com>')
+console.log('Coded with love, by @LukyVj <lucas.bonomi@gmail.com>')
+console.log('Design by @KevinCdnc <Kevin.cudennec@gmail.com>')
+console.log('A Rocket-Design collaboration <http://rocket-design.fr>')
 }
 
 
 function addArobaze(){
-  $('input[type="text"]').on('click', function(){
+  $('input[type="text"]').on('click blur', function(){
     if(!$(this).val()){
       $(this).attr('value','@');
       $(this).selectRange(1);
@@ -191,9 +201,13 @@ function confirmFirstStep(){
     }, 200);
     setTimeout(function(){
      var num = $('.user-list li').length;
-     $('#total-subscribed').css('opacity','1').empty().append(num)
+     $('#total-subscribed').css('opacity','1').empty().append(num);
+
      if(num>15){
       $('#showMore').css('display','block')
+    }
+    else{
+      $('#showMore').css('display','none')
     }
   }, 500)
   }
@@ -201,12 +215,16 @@ function confirmFirstStep(){
 }
 
 function showMore(){
+  var iLength = $('li').length;
+  var iHeight = 55.55;
+  var fHeight = iHeight * iLength;
+
   $('#showMore').on('click', function(e){
     e.preventDefault();
     if($(this).text()=='Voir tous ...'){
       $(this).empty().append('Voir moins..');
       $('.user-list').animate({
-        height: "1200px",
+        height: fHeight +'px',
       }, 0, function() {}).css('overflow','auto');
     }
     else{
@@ -222,6 +240,7 @@ function showMore(){
 }
 
 function form(){
+  inputIndex();
   addArobaze();
   getUserName();
   emailDetection();
