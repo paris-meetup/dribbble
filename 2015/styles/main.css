@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -422,6 +423,15 @@ body {
   font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
   background: #f4f8ff;
 }
+body.washere:before {
+  content: 'Il semblerais que vous ayez déjà effectué une inscription';
+  position: absolute;
+  z-index: 12;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 1em;
+  color: #fff;
+}
 
 h1, h3, h4, h5 {
   font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
@@ -769,7 +779,7 @@ fieldset {
 .inscription-card .user-list {
   width: 100%;
   float: left;
-  height: 210px;
+  height: auto;
   transition: height .6s ease;
   overflow-y: hidden;
 }
