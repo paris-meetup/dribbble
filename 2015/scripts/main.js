@@ -4,6 +4,8 @@ function freshStyle(stylesheet){
     $('#list').attr('href',stylesheet);
   } , 150)
 }
+
+
 function inputIndex(){
   var i = 0;
   $('input').each(function(){
@@ -17,12 +19,13 @@ var myDataRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/atendees')
 var restyled = 'styles/over-list.css'; 
 
 function tokenize(){
-  var url = 'https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=';
+  var url = 'https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=';
   var rand =  Math.random().toString(36).substr(2);
-  var now = Date.now().toString(36).substr(2);
+  var now = Date.now();
   var token = rand + rand + now;
   var securl = url + token;
-  $('#ponytag').attr('value', securl );
+  $('#ponytag').attr('value', url + now + 'ParisDribbbleMeetup - ' + $('input[type="text"]').val());
+  $('#token').attr('value', token);
 }
 
 
@@ -143,24 +146,30 @@ function isValidEmailAddress(emailAddress) {
 function ponyTail(){
   $.ajax({
     type: 'POST',
-  url: "https://mandrillapp.com/api/1.0/messages/send.json",
-  data: {
-    'key': 'Ue5cb6wINC5oMkQ8LRISSQ',
-    'message': {
-      'from_email': 'hello@rocket-design.fr',
-      'to': [
-      {
-        'email': $('input[type="email"]').val(),
-        'name': $('input[type="text"]').val(),
-        'type': 'to'
-      }
-      ],
-      'autotext': 'true',
-      'subject': 'QR Code | Paris Dribbble Meetup',
-      'html': 'Hi, thank you for registering to the Paris Dribbble Meetup #1. Here is the link to your unique personal QRCode : '+$('#ponytag').val()+' . You have to get it in order to participate to the meetup.'
+    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+    data: {
+      'key': 'Ue5cb6wINC5oMkQ8LRISSQ',
+      'message': {
+        'from_email': 'hello@rocket-design.fr',
+        'to': [
+        {
+          'email': $('input[type="email"]').val(),
+          'name': $('input[type="text"]').val(),
+          'type': 'to'
+        }
+        ],
+        'autotext': 'true',
+        'subject': 'QR Code | Paris Dribbble Meetup',
+        'html': 'Bonjour, <strong>'+$('input[type="text"]').val().replace('@','')+'</strong>. <br/>Merci pour votre participation au <strong>Paris Dribbble Meetup #1</strong>.<br/><br/> Voici votre <strong>QRCode</strong> unique personel :<br/> <img src="'+$('#ponytag').val()+'" /><br/>( <i><a href="'+$('#ponytag').val()+'"> Ou cliquez ce lien si l\'image ne s\'affiche pas</a></i> )  <br/><br/>Vous devrez vous présenter à l\'évènement, muni de ce document. <br/><br/> Nous vous tiendrons informés de la date et du lieu par mail, ainsi que sur le site <a href="http://dribbble.paris-meetup.com/20115">http://dribbble.paris-meetup.com/20115</a> <br/><br/>AC - KC - LB'
+      },
+      'headers': {
+        'Reply-To': 'hello@rocket-design.fr'
+      },
+      'auto_html': true,
+      'inline_css': true
     }
-  }
-}).done(function(response) {
+  }).done(function(response) {
+    $('#mailback').empty().append('<h4>Un email contenant votre identifiant viens de vous être envoyé</h4> <h4><small>Nous vous tiendrons informés de la date et du lieu par email.</small></h4>')
    console.log(response); // if you're into that sorta thing
  });
 };
@@ -223,32 +232,88 @@ function confirmFirstStep(){
     $('#userImage').attr('src', userImage);
 
     if(!inDevelopement){
-    // Push user data to firebase 
-    myDataRef.push({name: userName, avatar: userImage, email: userEmail, dates: selectedDates,qrCode: uniqueUrl   });
+    // Push user data to firebase
+    var usersRef = new Firebase('https://dbbb-parismeetup.firebaseio.com/atendees');
 
-    // Set a cookie to avoid the user to readd his email
-    $.cookie('alreadyIn', '1', { expires: 365 });
-    $.cookie('userName', userName , { expires: 365 });
-    $.cookie('userImage', userImage , { expires: 365 });
 
-    ponyTail();
+    function checkIfUserExists (userId) {
 
-    setTimeout(function(){
-      loadBase();
-    }, 200);
-    setTimeout(function(){
-     var num = $('.user-list li').length;
-     $('#total-subscribed').css('opacity','1').empty().append(num);
+      usersRef.once('value', function(snapshot) {
 
-     if(num>15){
-      $('#showMore').css('display','block')
+        var attendees = snapshot.val();
+        for (var a in attendees) {
+
+          var attendee = attendees[a];
+
+          if(attendee.name === userId) {
+
+            userExistsCallback(userId, attendee);
+            return true;
+          }
+          else{
+            userExistsCallback(userId, false);
+            return false; 
+          }
+
+        }
+
+      });
+
     }
-    else{
-      $('#showMore').css('display','none')
+
+    function go() {
+      var userId = userName;
+      checkIfUserExists(userId);
     }
-  }, 500)
-  }
-}
+
+    function userExistsCallback(userId, exists) {
+
+     if (exists) {
+      alert('Vous êtes déjà dans la liste');
+      console.log('exists')
+      exists.stopPropagation();
+    }
+    else {
+      console.log('dont exist yo');
+
+      usersRef.push({
+        name: userName, 
+        avatar: userImage, 
+        email: userEmail, 
+        dates: selectedDates,
+        qrCode: uniqueUrl   
+      });
+
+      ponyTail();
+
+         // Set a cookie to avoid the user to readd his email
+         $.cookie('alreadyIn', '1', { expires: 365 });
+         $.cookie('userName', userName , { expires: 365 });
+         $.cookie('userImage', userImage , { expires: 365 });
+
+
+         setTimeout(function(){
+          loadBase();
+        }, 200);
+
+         setTimeout(function(){
+           var num = $('.user-list li').length;
+           $('#total-subscribed').css('opacity','1').empty().append(num);
+
+           if(num>15){
+            $('#showMore').css('display','block')
+          }
+          else{
+            $('#showMore').css('display','none')
+          }
+        }, 500)
+       }
+     }
+
+
+     go();       
+   }
+ }
 }
 
 function showMore(){
