@@ -267,9 +267,11 @@ function confirmFirstStep(){
 
     function userExistsCallback(userId, exists) {
 
-     if (!exists) {
-
-      console.log('dont exist yo');
+     if (exists) {
+      console.log('exists')     
+       }
+       else  {
+         console.log('dont exist yo');
 
       usersRef.push({
         name: userName, 
@@ -302,9 +304,6 @@ function confirmFirstStep(){
             $('#showMore').css('display','none')
           }
         }, 500)
-       }
-       else  {
-        console.log('exists')
       }
     }
 
