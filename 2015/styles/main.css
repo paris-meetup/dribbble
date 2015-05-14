@@ -649,6 +649,8 @@ fieldset {
 .inscription-card .well a.btn {
   margin: 1.5em auto .5em;
   display: block;
+  line-height: 60px;
+  padding: 0;
 }
 .inscription-card .form__infos {
   float: left;
