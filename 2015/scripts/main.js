@@ -267,12 +267,8 @@ function confirmFirstStep(){
 
     function userExistsCallback(userId, exists) {
 
-     if (exists) {
-      alert('Vous êtes déjà dans la liste');
-      console.log('exists')
-      exists.stopPropagation();
-    }
-    else {
+     if (!exists) {
+
       console.log('dont exist yo');
 
       usersRef.push({
@@ -307,12 +303,15 @@ function confirmFirstStep(){
           }
         }, 500)
        }
-     }
+       else  {
+        console.log('exists')
+      }
+    }
 
 
-     go();       
-   }
- }
+    go();       
+  }
+}
 }
 
 function showMore(){
