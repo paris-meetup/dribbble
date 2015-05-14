@@ -251,8 +251,7 @@ function confirmFirstStep(){
             return true;
           }
           else{
-            userExistsCallback(userId, false);
-            return false; 
+            userExistsCallback(false);
           }
 
         }
