@@ -431,6 +431,10 @@ body.washere:before {
   background: rgba(0, 0, 0, 0.6);
   margin: 1em;
   color: #fff;
+  -webkit-animation: disapear 3s ease;
+  animation: disapear 3s ease;
+  opacity: 0;
+  border-radius: 26px;
 }
 
 h1, h3, h4, h5 {
@@ -948,6 +952,28 @@ fieldset {
   to {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes disapear {
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disapear {
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 .done:after {
