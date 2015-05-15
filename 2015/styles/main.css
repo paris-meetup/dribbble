@@ -437,6 +437,20 @@ body.washere:before {
   border-radius: 26px;
 }
 
+figcaption {
+  text-indent: -99999px;
+  color: transparent;
+  height: 0;
+}
+
+input {
+  outline: none;
+}
+
+[disabled] {
+  cursor: not-allowed;
+}
+
 h1, h3, h4, h5 {
   font-family: "Helvetica Neue",Arial Narrow, helvetica, sans-serif;
 }
@@ -573,10 +587,10 @@ fieldset {
 }
 .inscription-card .card__header .header__visual-item--2 {
   width: 18%;
-  padding: 0 1%;
+  padding-left: 1%;
 }
 .inscription-card .card__header .separator-x {
-  width: calc(60% - 32px);
+  width: calc(60% - 22px);
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   top: 50%;
@@ -659,6 +673,9 @@ fieldset {
 .inscription-card .well {
   margin-top: 1em;
   padding: 16px;
+}
+.inscription-card .well:not(:first-child) {
+  margin-top: 1em;
 }
 .inscription-card .well a.btn {
   margin: 1.5em auto .5em;
@@ -780,6 +797,9 @@ fieldset {
   font-weight: bold;
   line-height: 4;
 }
+.inscription-card .user-subscribed .user-pseudo span {
+  color: #9AA6C1;
+}
 .inscription-card .user-list {
   width: 100%;
   float: left;
@@ -877,6 +897,25 @@ fieldset {
   display: block;
   float: left;
   background: #dbe4f7;
+}
+.separator-x.big-space {
+  margin: 1.6em auto;
+}
+
+.inscription-card a.btn {
+  margin: 2em auto 0;
+  display: block;
+  padding: .5em;
+  line-height: 2;
+  min-height: 44px;
+}
+
+.oops {
+  float: left;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  height: 50px;
 }
 
 .hidden {
@@ -1051,4 +1090,46 @@ fieldset {
 .v-center {
   position: relative;
   top: 14px;
+}
+
+footer {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding-bottom: 1.5em;
+}
+footer small {
+  color: #dbe4f7;
+}
+
+#hello header img {
+  margin-top: 1.6em;
+  margin-bottom: 0;
+  width: 36%;
+}
+
+#mailback h4 {
+  padding-top: .5em;
+}
+#mailback h4:nth-child(1) {
+  margin-bottom: 1.5em;
+}
+#mailback h4:nth-child(2) {
+  margin-bottom: 1em;
+}
+
+.twitter-accounts li {
+  float: left;
+  width: 33.33%;
+  padding: .5em 0;
+  text-align: center;
+}
+.twitter-accounts li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #56595F;
+}
+.twitter-accounts li a:hover {
+  color: #ea4c89;
+  text-decoration: underline;
 }
