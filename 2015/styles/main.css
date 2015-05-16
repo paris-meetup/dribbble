@@ -589,6 +589,11 @@ fieldset {
   width: 18%;
   padding-left: 1%;
 }
+@media all and (max-width: 800px) {
+  .inscription-card .card__header .header__visual-item--2 {
+    width: 17%;
+  }
+}
 .inscription-card .card__header .separator-x {
   width: calc(60% - 22px);
   -webkit-transform: translateY(-50%);
@@ -604,6 +609,21 @@ fieldset {
   float: left;
   padding-top: 0;
   width: 100%;
+}
+@media all and (max-width: 800px) {
+  .inscription-card .card__form, .inscription-card .well {
+    width: calc(100% - 16px);
+    margin-left: 8px;
+  }
+}
+@media all and (max-width: 640px) {
+  .inscription-card .card__form, .inscription-card .well {
+    width: 100%;
+    margin-left: 0;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 16px;
+  }
 }
 .inscription-card .card__form header h2, .inscription-card .card__form header h3, .inscription-card .well header h2, .inscription-card .well header h3 {
   padding: 0;
@@ -766,6 +786,10 @@ fieldset {
   color: #fff;
   background: #ea4c89;
 }
+.inscription-card input[type="button"]:hover, .inscription-card a.btn:hover {
+  background: #e62c74;
+  border-color: #f4f8ff;
+}
 .inscription-card a.btn {
   border-color: #f4f8ff;
   color: #fff;
@@ -776,8 +800,13 @@ fieldset {
 }
 .inscription-card .user-subscribed {
   width: 100%;
-  height: 160px;
+  height: 180px;
   float: left;
+}
+@media all and (max-width: 640px) {
+  .inscription-card .user-subscribed {
+    height: 210px;
+  }
 }
 .inscription-card .user-subscribed img {
   border-radius: 100%;
@@ -797,8 +826,16 @@ fieldset {
   font-weight: bold;
   line-height: 4;
 }
-.inscription-card .user-subscribed .user-pseudo span {
+.inscription-card .user-subscribed span.info {
   color: #9AA6C1;
+  font-weight: 500;
+  text-align: center;
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 0;
+  margin: -14px 0px 0;
 }
 .inscription-card .user-list {
   width: 100%;
@@ -929,35 +966,6 @@ fieldset {
   transform: rotate(-90deg);
 }
 
-/* Animation */
-@-webkit-keyframes popIn {
-  0% {
-    -webkit-transform: scale(0) rotate(-45deg);
-    transform: scale(0) rotate(-45deg);
-  }
-  66% {
-    -webkit-transform: scale(1.2) rotate(15deg);
-    transform: scale(1.2) rotate(15deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(0deg);
-    transform: scale(1) rotate(0deg);
-  }
-}
-@keyframes popIn {
-  0% {
-    -webkit-transform: scale(0) rotate(-45deg);
-    transform: scale(0) rotate(-45deg);
-  }
-  66% {
-    -webkit-transform: scale(1.2) rotate(15deg);
-    transform: scale(1.2) rotate(15deg);
-  }
-  100% {
-    -webkit-transform: scale(1) rotate(0deg);
-    transform: scale(1) rotate(0deg);
-  }
-}
 .loader {
   height: 60px;
   width: 60px;
@@ -972,49 +980,6 @@ fieldset {
   border-radius: 100%;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-@-webkit-keyframes disapear {
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes disapear {
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 .done:after {
   content: '';
   display: block;
@@ -1101,6 +1066,10 @@ footer {
 footer small {
   color: #dbe4f7;
 }
+footer small a {
+  color: #dbe4f7;
+  text-decoration: none;
+}
 
 #hello header img {
   margin-top: 1.6em;
@@ -1108,11 +1077,23 @@ footer small {
   width: 36%;
 }
 
+#hello a[href*="join"] {
+  transition: background .1s ease;
+}
+
 #mailback h4 {
   padding-top: .5em;
 }
 #mailback h4:nth-child(1) {
   margin-bottom: 1.5em;
+}
+@media all and (max-width: 640px) {
+  #mailback h4:nth-child(1) {
+    width: 100%;
+    text-align: center;
+    left: 0;
+    display: block;
+  }
 }
 #mailback h4:nth-child(2) {
   margin-bottom: 1em;
@@ -1132,4 +1113,76 @@ footer small {
 .twitter-accounts li a:hover {
   color: #ea4c89;
   text-decoration: underline;
+}
+
+/* Animation */
+@-webkit-keyframes popIn {
+  0% {
+    -webkit-transform: scale(0) rotate(-45deg);
+    transform: scale(0) rotate(-45deg);
+  }
+  66% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+}
+@keyframes popIn {
+  0% {
+    -webkit-transform: scale(0) rotate(-45deg);
+    transform: scale(0) rotate(-45deg);
+  }
+  66% {
+    -webkit-transform: scale(1.2) rotate(15deg);
+    transform: scale(1.2) rotate(15deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes disapear {
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes disapear {
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
