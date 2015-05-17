@@ -1,1 +1,0 @@
-var dataBase="https://dbbb-parismeetup.firebaseio.com/";
