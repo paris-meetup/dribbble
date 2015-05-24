@@ -5,19 +5,19 @@
   <title>Dribbble Paris Meetup - #1</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <link rel="icon" type="image/png" href="images/favicon.png" />
   <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
   
   <meta property="og:title" content="First Dribbble Paris Meetup" />
   <meta property="og:site_name" content="Dribbble Paris Meetup - #1"/>
   <meta property="og:url" content="http://dribbble.paris-meetup.com/2015" />
-  <meta property="og:image" content="http://dribbble.paris-meetup.com/2015/images/og_image.png" />
+  <meta property="og:image" content="images/og_image.png" />
   <meta property="fb:app_id" content="1583132091955950" />
   <meta property="og:type" content="Website" />
   <meta property="og:locale:alternate" content="fr_FR" /> 
   <meta property="article:author" content="https://www.facebook.com/rocketdesign75" />
   <meta property="article:publisher" content="https://www.facebook.com/rocketdesign75" />
-  <meta property="fb:app_id" content="1583132091955950" />
 
   <link rel="stylesheet"  href="styles/main.css" />
   <link rel="prefetch" id="list" href="styles/over-list.css" />
@@ -50,9 +50,9 @@
               <div class="header">
 
                <div class="header__content">
-                <a href="index.html"> <img src="images/svg/paris.svg" title="Paris" alt="Pairs" class="content__main-visual"/></a>
-                 <div class="visual__shadows"></div>
-                 <div class="content__secondary-visual">
+               <a href="index.html"> <img src="images/svg/paris.svg" title="Paris" alt="Pairs" class="content__main-visual"/></a>
+                <div class="visual__shadows"></div>
+                <div class="content__secondary-visual">
                   <img src="images/svg/dribbble-badge.svg" title="Dribbble badge" alt="Dribbble badge"  />
                 </div>
               </div>
@@ -70,27 +70,69 @@
                     <img src="images/svg/meetup.svg" alt="Meetup mention" class="header__visual-item--2">
                   </header>
 
-                  
+                  <div id="load" class="hidden">
+                    <section class="card__form">
+                      <div class="loader"></div>
+                    </section>
+                  </div>
 
-                  <div id="hello">
+                  <div id="inscription">
+
+
                     <section class="card__form">
                       <header>
-                        <figure>
-                          <img src="images/svg/vendredi-on.svg" alt="Vendredi 26 Juin, Paris Dribbble Meetup" />
-                          <figcaption>Vendredi 26 Juin </figcaption>
-                        </figure>
+                        <h2>Inscription</h2>
+                        <h4>Places limitées</h4>
                       </header>
-                      <span class="separator-x big-space"></span>
-                      <h4 class="info">L'inscription est réservée en priorité aux personnes munies d'un compte <strong>player</strong> Dribbble.</h4>
-                      <a href="join.html" class="btn">Inscription</a>
-                      <span class="separator-x big-space"></span>
-                      <h4 class="info">Contact</h4>
+                      <form>
+                        <fieldset>
+                          <span class="icon icon-dribbble"></span><input type="text" name="username" id="username" placeholder="Nom de player Dribbble" tabindex="1" required/>
+                        </fieldset>
+                        
+                        <fieldset>
+                          <span class="icon icon-email"></span><input type="email" name="email" id="email"  tabindex="2"  placeholder="hello@youremail.com" required/>
+                        </fieldset>
 
-                      <ul class="twitter-accounts">
-                        <li><a href="http://twitter.com/LukyVj" class="btn-swag btn-dribbble btn-border-o">@LukyVj</a></li>
-                        <li><a href="http://twitter.com/KevinCdnc" class="btn-swag btn-dribbble btn-border-o">@KevinCdnc</a></li>
-                        <li><a href="http://twitter.com/ArthurCarayon" class="btn-swag btn-dribbble btn-border-o">@ArthurCarayon</a></li>
-                      </ul>
+
+
+                        <div class="hidden player-informations">
+                          <input type="text" class="user-avatar" id="detector" value="notADribbblePlayer"/>
+                          <input type="text" class="user-dates" id="dates" value="0-0"/>
+                          <input id="ponytag" />
+                          <input id="token" />
+                        </div>
+
+                        <fieldset>
+                          <input type="button"  tabindex="3" disabled="true"  value="s'inscrire"/>
+                        </fieldset>
+                      </form>
+                    </section>
+                  </div>
+
+                  <div id="thankyou" class="hidden">
+
+                    <section class="card__form">
+                      <header>
+                        <h2>Merci</h2>
+                        <span id="mailback">
+                          <h4>Nous vous tiendrons informés de la date et du lieu par email.</h4>
+                        </span>
+
+                        <div class="user-subscribed">
+                          <img src="https://scontent-cdg.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/1959375_788427704522972_7357255591455529055_n.jpg?oh=c04735fdf70b995b6ecd2446476a73cb&oe=55CD6C6F" alt="{{user.name}} avatar" id="userImage" class="twisted">
+                          <span class="user-pseudo" id="userName"></span>
+                        </div>
+                      </header>
+                      <span class="separator-x"></span>
+                      <section class="subscribed-zone">
+                        <header>
+                          <h5>Déjà <span id="total-subscribed"></span> inscrits</h5>
+                        </header>
+                        <div class="user-list">
+                          <ul></ul>
+                        </div>
+                      </section>
+
                     </section>
                   </div>
 
@@ -116,7 +158,7 @@
           </script>
 
           <script src="scripts/jquery.min.js"></script>
-          <script src="scripts/jribbble-1.0.1.min.js"></script>
-          <script src="scripts/main.js"></script>
+          <script src="scripts/jribbble-1.0.1-tweaked.js"></script>
+          <script src="scripts/main.2.js"></script>
         </body>
         </html>
