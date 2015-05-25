@@ -7,3 +7,9 @@ dist
 bower_components
 app/bower_components
 test/bower_components
+app/scripts/_config.js
+app/scripts/_import.js
+/2015
+.DS_Store
+.gitignore
+.nojekyll
