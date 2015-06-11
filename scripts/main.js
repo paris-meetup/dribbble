@@ -8,6 +8,6 @@ $(function() {
     });
 
      setTimeout(function() {
-        $("#howmuch").fadeIn().append($("#list li").length)
-    }, 1200)
+        $("#howmuch").empty().fadeIn().append($("#list li").length));
+    }, 200)
 });
