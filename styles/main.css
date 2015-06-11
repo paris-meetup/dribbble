@@ -1,1 +1,1346 @@
-﻿/*! normalize.css v3.0.2 | MIT License | git.io/normalize */@import url(over-list.css);html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}:root{font-size:16px}*{-webkit-font-smoothing:antialiased;margin:0;padding:0;color:inherit;box-sizing:inherit}*:focus{outline:none}.bold{font-weight:bold;font-size:1rem}html:before{content:'';display:none;background:url("../images/svg/check-icon.svg"),url("../images/svg/jeudi-on.svg"),url("../images/svg/vendredi-on.svg")}html,body{width:100%;height:100%;margin:0;padding:0}body{font-family:"Helvetica Neue",Arial Narrow, helvetica, sans-serif;background:#f4f8ff;box-sizing:border-box;color:#56595F}body.washere:before{content:'Il semblerais que vous ayez déjà effectué une inscription';position:absolute;z-index:12;padding:1em;background:rgba(0,0,0,0.6);margin:1em;color:#fff;animation:disapear 3s ease;opacity:0;border-radius:26px}figcaption{text-indent:-99999px;color:transparent;height:0}input{outline:none}p{line-height:26px}h1,h3,h4,h5{font-family:"Helvetica Neue",Arial Narrow, helvetica, sans-serif}h2{font-family:"Helvetica Neue",Arial Narrow, helvetica, sans-serif}h4,h5{font-weight:600;color:#9aa6c1;font-size:16px}h5{text-align:left}ul{list-style:none;padding:0}form{position:relative}fieldset{border:none}header h3{text-align:left;padding:1em 0 !important;padding-right:1em !important;background-color:#fbfcfe;float:left;position:absolute;margin-top:-65px}.place header h3{margin-top:-60px}.container{width:100%;float:left}.header{height:200px;width:100%;float:left;background:rgba(234,76,137,0.8) url("../images/background.png") no-repeat center center;background-size:cover;text-align:center}.header .header__content{max-width:550px;width:100%;margin:auto}.header .header__content .content__main-visual{clear:both;display:block;width:100%;max-width:160px;height:150px;margin:auto;position:relative}.header .header__content .visual__shadows{width:100%;max-width:80px;height:80px;margin:10px auto;padding:1em;border-radius:100%;box-shadow:0 0 0 1.2em rgba(255,255,255,0.4),0 0 0 0.6em rgba(255,255,255,0.4);position:absolute;left:0;right:0;z-index:0}.header .header__content .content__secondary-visual{background:#f4f8ff;width:100%;max-width:80px;margin:10px auto;padding:1em;border-radius:100%;z-index:2;position:relative}.container__inscription{width:100%;min-height:200px;background:#f4f8ff;float:left;position:relative;z-index:1;box-shadow:inset 0 2px 0 rgba(0,0,0,0.05),inset 0 1px 0 rgba(0,0,0,0.1)}.container__inscription .card__wrapper{width:100%;max-width:800px;margin:auto}.inscription-card{width:100%;height:auto;max-width:800px;float:left;padding:15px 45px 45px;margin:45px auto;background:#ffffff;box-shadow:0 2px 16px rgba(0,0,0,0.08);text-align:center}@media all and (max-width: 800px){.inscription-card{padding:15px 0 45px}}.inscription-card .card__header{height:75px;float:left;width:100%}@media all and (max-width: 800px){.inscription-card .card__header{padding:0 16px}}.inscription-card .card__header>*{float:left;display:block;position:relative;height:100%}.inscription-card .card__header .header__visual-item--1{width:20%;top:-3px}.inscription-card .card__header .header__visual-item--2{width:18%;padding-left:1%}@media all and (max-width: 800px){.inscription-card .card__header .header__visual-item--2{width:16%;padding-left:0}}.inscription-card .card__header .separator-x{width:calc(60% - 22px);transform:translateY(-50%);top:50%;position:relative;margin:0 16px}.inscription-card .card__header .separator-x:before,.inscription-card .card__header .separator-x:after{content:" ";display:table}.inscription-card .card__header .separator-x:after{clear:both}.inscription-card .card__form,.inscription-card .well{background:#fbfcfe;border:1px solid #dbe4f7;padding:45px;float:left;padding-top:0;width:100%}@media all and (max-width: 800px){.inscription-card .card__form,.inscription-card .well{width:calc(100% - 16px);margin-left:8px}}@media all and (max-width: 640px){.inscription-card .card__form,.inscription-card .well{width:100%;margin-left:0;border-left:0px;border-right:0px;padding:16px}}.inscription-card .card__form header,.inscription-card .well header{padding:1.5em 0 !important}.inscription-card .card__form header h2,.inscription-card .card__form header h3,.inscription-card .well header h2,.inscription-card .well header h3{padding:0;line-height:1.6}.inscription-card .card__form header h2,.inscription-card .well header h2{color:#606165;font-weight:bold;-webkit-margin-after:0}.inscription-card .card__form header h4,.inscription-card .well header h4{-webkit-margin-before:0;font-size:16px;position:relative;width:calc(100% + 6em);left:-3em}.inscription-card .card__form .introduction img,.inscription-card .well .introduction img{max-width:100%}.inscription-card .card__form .introduction img.date,.inscription-card .well .introduction img.date{width:100px}.inscription-card .card__form .introduction .left-part,.inscription-card .well .introduction .left-part{max-width:70%;float:left;text-align:left}.inscription-card .card__form .introduction .left-part p,.inscription-card .well .introduction .left-part p{margin-top:15px}.inscription-card .card__form .intro p,.inscription-card .well .intro p{margin-top:15px;text-align:left}.inscription-card .card__form .intro p:last-child,.inscription-card .well .intro p:last-child{margin-bottom:15px}.inscription-card .card__form .partenaires,.inscription-card .well .partenaires{padding:27.14286px 0;width:100%;float:left}.inscription-card .card__form .partenaires header,.inscription-card .well .partenaires header{padding:0 !important;margin:0}.inscription-card .card__form .partenaires ul,.inscription-card .well .partenaires ul{margin:0;width:100%;min-height:120px;padding:1em 0;clear:both;float:left}.inscription-card .card__form .partenaires ul li,.inscription-card .well .partenaires ul li{float:left;width:25%;margin-top:calc(38px / 2 )}.inscription-card .card__form .partenaires ul li img,.inscription-card .well .partenaires ul li img{max-width:100%;width:55%}.inscription-card .card__form .programme,.inscription-card .well .programme{padding:27.14286px 0;width:100%;float:left}.inscription-card .card__form .programme header,.inscription-card .well .programme header{padding:0 !important;margin:0}.inscription-card .well{margin-top:1em;padding:38px}.inscription-card .well:not(:first-child){margin-top:1em}.inscription-card .well a.btn{margin:1.5em auto .5em;display:block;line-height:60px;padding:0}.inscription-card .well .well{background:#fff !important;padding:46px;margin-bottom:24px}.inscription-card .form__infos{float:left;width:100%;padding:1em 0}.inscription-card .form__infos p{color:#474747;font-weight:bold;font-size:14px}.inscription-card .form__dates{width:190px;margin:auto;padding:0 0 45px}.inscription-card .form__dates label{display:block;float:left;height:90px;width:90px;cursor:pointer;padding:0}.inscription-card .form__dates label:after{content:'';display:block;height:30px;width:90px;position:absolute;z-index:2;margin-top:90px}.inscription-card .form__dates label[for="jeudi-25-juin"]{background:url("../images/svg/jeudi-off.svg") no-repeat center center;background-size:contain}.inscription-card .form__dates label[for="vendredi-26-juin"]{background:url("../images/svg/vendredi-off.svg") no-repeat center center;background-size:contain;float:right}.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"]{background:url("../images/svg/jeudi-on.svg") no-repeat center center;background-size:contain}.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"]:after{background:url("../images/svg/check-icon.svg") no-repeat center center;background-size:20%;animation:popIn .7s ease-in}.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"]{background:url("../images/svg/vendredi-on.svg") no-repeat center center;background-size:contain}.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"]:after{background:url("../images/svg/check-icon.svg") no-repeat center center;background-size:20%;animation:popIn .7s ease-in}.inscription-card input[type="button"],.inscription-card a.btn{width:180px;height:60px;background:transparent;color:#dbe4f7;font-weight:bold;text-transform:uppercase;font-size:20px;border-radius:6px;border:none;appearance:none;padding:0;margin:45px auto 0;cursor:pointer;border:1px solid #dbe4f7;transition:border-color .3s ease, color .3s ease .1s , background .3s ease .2s}.inscription-card input[type="button"].activated,.inscription-card a.btn.activated{border-color:#f4f8ff;color:#fff;background:#ea4c89}.inscription-card input[type="button"]:hover,.inscription-card a.btn:hover{background:#e62c74;border-color:#f4f8ff}.inscription-card a.btn{border-color:#f4f8ff;color:#fff;background:#ea4c89;padding:.6em;text-decoration:none;margin:.5em auto}.inscription-card .time-group{text-align:left;width:100%;float:left;font-size:20px;margin:1em auto}.inscription-card .time-group:first-child{margin-top:0}.inscription-card .time-group:last-child{margin-bottom:0}.inscription-card .time-group strong,.inscription-card .time-group p{float:left}.inscription-card .time-group strong{color:#ea4c89}.inscription-card footer{display:block;float:left;width:100%;margin:1em auto 0}.inscription-card footer a{color:#9AA6C1;text-decoration:none;margin-top:2em;display:block;margin-bottom:0}.inscription-card .subscribed-zone{float:left;width:100%}.inscription-card #total-subscriber{opacity:0;transition:opacity .1s ease}.inscription-card #load .card__form{min-height:280px}.inscription-card #load .card__form .loader{top:110px}.icon-dribbble{background:url("../images/svg/dribbble-icon.svg") no-repeat center center;background-size:37%}.icon-email{background:url("../images/svg/mail-icon.svg") no-repeat center center;background-size:37%}.separator-x{height:1px !important;width:100%;display:block;float:left;background:#dbe4f7}.separator-x.big-space{margin:1.6em auto}.inscription-card a.btn{margin:2em auto 0;display:block;padding:.5em;line-height:2;min-height:44px}.oops{float:left;width:100%;padding:1em;margin-bottom:1.5em;height:50px}.hidden{opacity:0;display:none;transition:opacity .3s ease, display 0s ease .3s}.twisted{transform:rotate(-90deg)}.loader{height:60px;width:60px;margin:0px auto;position:relative;animation:rotation .6s infinite linear;border-left:6px solid #DF3489;border-right:6px solid #DF3489;border-bottom:6px solid #DF3489;border-top:6px solid rgba(255,255,255,0);border-radius:100%}.done:after{content:'';display:block;height:30px;width:90px;position:absolute;right:0;margin-right:-12px;margin-top:18px;z-index:2;background:url("../images/svg/check-icon.svg") no-repeat center center;background-size:20%;animation:popIn .7s ease-in}.tooltip{background:rgba(0,0,0,0.75);bottom:100%;color:#fff;display:block;left:-20px;margin-top:15px;opacity:0;padding:8px 16px;pointer-events:none;position:absolute;z-index:90;width:auto;transform:translateY(80px);transition:all .25s ease-out;border-radius:4px}.tooltip a{color:#fff;text-decoration:none}.tooltip:before{bottom:-20px;content:" ";display:block;height:20px;left:0;position:absolute;width:100%}.tooltip:after{border-left:solid transparent 10px;border-right:solid transparent 10px;border-top:solid rgba(0,0,0,0.75) 10px;bottom:-10px;content:" ";height:0;left:50%;margin-left:-13px;position:absolute;width:0}.user-list li:hover img{transform:scale(1.3);transition:transform .3s ease}.user-list li:hover .tooltip{opacity:1;pointer-events:auto;transform:translateY(0px) translateZ(200px)}.v-center{position:relative;top:14px}footer{width:100%;float:left;text-align:center;padding-bottom:1.5em}footer small{color:#dbe4f7}footer small a{color:#dbe4f7;text-decoration:none}.place{text-align:left;padding:38px 0}.place p{margin-bottom:1em}.place img{max-width:40%;display:block;margin:3em auto 1em}a[disabled],.inscription-card input[type="button"]:not(.activated){cursor:not-allowed}a[disabled]:hover,.inscription-card input[type="button"]:not(.activated):hover{background:transparent;color:#dbe4f7;border:1px solid #dbe4f7}.appear{animation:appear .3s ease}@keyframes popIn{0%{transform:scale(0) rotate(-45deg)}66%{transform:scale(1.2) rotate(15deg)}100%{transform:scale(1) rotate(0deg)}}@keyframes rotation{from{transform:rotate(0deg)}to{transform:rotate(359deg)}}@keyframes disapear{10%{opacity:1}90%{opacity:1}100%{opacity:0}}@keyframes appear{0%{opacity:0}100%{opacity:1}}.mt{margin-top:15px}.logos-list{float:left;padding:0;width:100%;text-align:center !important}.logos-list li{display:block;width:25%;min-height:70px;text-align:center !important}.logos-list li img{height:100%}img[src*="shopify.png"]{position:relative;top:-13px}img[src*="panda"]{position:relative;top:-5px;max-width:75px !important;width:100%;padding:0 1em}img[src*="sleek"]{position:relative;top:0px;max-width:75px !important;width:100%;padding:0 1em}/*! Those buttons are from http://codepen.io/chrisdothtml/pen/waKBdM?editors=110 */button{background-color:transparent;border:0;cursor:pointer}.animate,.btn-swag,.btn-border-o:before,.btn-border-o:after,.btn-border:before,.btn-border:after,.btn-border-rev-o:before,.btn-border-rev-o:after,.btn-border-rev:before,.btn-border-rev:after,.btn-fill-vert-o:before,.btn-fill-vert-o:after,.btn-fill-vert:before,.btn-fill-vert:after,.btn-fill-horz-o:before,.btn-fill-horz-o:after,.btn-fill-horz:before,.btn-fill-horz:after{transition:all 0.3s}.btn-swag{display:inline-block;line-height:35px;margin:8px;padding:0 15px;font-size:15px;position:relative;opacity:.999;border-radius:3px}.btn-border-o{background-color:transparent;border:1px solid #d0d0d0;color:#B8B8B8}.btn-border-o:before,.btn-border-o:after{content:'';border-style:solid;position:absolute;z-index:5;border-radius:3px;box-sizing:content-box}.btn-border-o:before{width:0;height:100%;border-width:1px 0 1px 0;top:-1px;left:0;transition-delay:0.05s}.btn-border-o:after{width:100%;height:0;border-width:0 1px 0 1px;top:0;left:-1px}.btn-border-o:hover:before{width:100%}.btn-border-o:hover:after{height:100%}.btn-border-o.btn-dribbble:before,.btn-border-o.btn-dribbble:after{border-color:#E84F89}.btn-border-o.btn-dribbble:hover{color:#E84F89}.btn-border{background-color:#e5e5e5;border:1px solid #E84F89;color:#a6a6a6}.btn-border:before,.btn-border:after{content:'';border-style:solid;position:absolute;z-index:5;border-radius:3px;box-sizing:content-box}.btn-border:before{width:0;height:100%;border-width:1px 0 1px 0;top:-1px;left:0;transition-delay:0.05s}.btn-border:after{width:100%;height:0;border-width:0 1px 0 1px;top:0;left:-1px}.btn-border:hover{background-color:transparent}.btn-border:hover:before{width:100%}.btn-border:hover:after{height:100%}.btn-border.btn-dribbble:before,.btn-border.btn-dribbble:after{border-color:#E84F89}.btn-border.btn-dribbble:hover{color:#E84F89}.btn-border-rev-o{background-color:transparent;border:1px solid #d0d0d0;color:#B8B8B8}.btn-border-rev-o:before,.btn-border-rev-o:after{content:'';border-style:solid;position:absolute;z-index:5;border-radius:3px;box-sizing:content-box}.btn-border-rev-o:before{width:0;height:100%;border-width:1px 0 1px 0;top:-1px;right:0;transition-delay:0.05s}.btn-border-rev-o:after{width:100%;height:0;border-width:0 1px 0 1px;bottom:0;left:-1px}.btn-border-rev-o:hover:before{width:100%}.btn-border-rev-o:hover:after{height:100%}.btn-border-rev-o.btn-dribbble:before,.btn-border-rev-o.btn-dribbble:after{border-color:#E84F89}.btn-border-rev-o.btn-dribbble:hover{color:#E84F89}.btn-border-rev{background-color:#e5e5e5;border:1px solid #e5e5e5;color:#a6a6a6}.btn-border-rev:before,.btn-border-rev:after{content:'';border-style:solid;position:absolute;z-index:5;border-radius:3px;box-sizing:content-box}.btn-border-rev:before{width:0;height:100%;border-width:1px 0 1px 0;top:-1px;right:0}.btn-border-rev:after{width:100%;height:0;border-width:0 1px 0 1px;bottom:0;left:-1px;transition-delay:0.05s}.btn-border-rev:hover{background-color:transparent}.btn-border-rev:hover:before{width:100%}.btn-border-rev:hover:after{height:100%}.btn-border-rev.btn-dribbble:before,.btn-border-rev.btn-dribbble:after{border-color:#E84F89}.btn-border-rev.btn-dribbble:hover{color:#E84F89}.btn-fill-vert-o{background-color:transparent;border:1px solid #d0d0d0;color:#B8B8B8;overflow:hidden}.btn-fill-vert-o:before,.btn-fill-vert-o:after{content:'';width:100%;height:0;opacity:0;position:absolute;left:0;z-index:-1}.btn-fill-vert-o:before{top:50%}.btn-fill-vert-o:after{bottom:50%}.btn-fill-vert-o:hover{color:#fff}.btn-fill-vert-o:hover:before,.btn-fill-vert-o:hover:after{height:50%;opacity:1}.btn-fill-vert-o.btn-dribbble:before,.btn-fill-vert-o.btn-dribbble:after{background-color:#E84F89}.btn-fill-vert-o.btn-dribbble:hover{border-color:#E84F89}.btn-fill-vert{background-color:#e5e5e5;border:1px solid #e5e5e5;color:#a6a6a6;overflow:hidden}.btn-fill-vert:before,.btn-fill-vert:after{content:'';width:100%;height:0;opacity:0;position:absolute;left:0;z-index:-1}.btn-fill-vert:before{top:50%}.btn-fill-vert:after{bottom:50%}.btn-fill-vert:hover{color:#fff}.btn-fill-vert:hover:before,.btn-fill-vert:hover:after{height:50%;opacity:1}.btn-fill-vert.btn-dribbble:before,.btn-fill-vert.btn-dribbble:after{background-color:#E84F89}.btn-fill-vert.btn-dribbble:hover{border-color:#E84F89}.btn-fill-horz-o{background-color:transparent;border:1px solid #d0d0d0;color:#B8B8B8;overflow:hidden}.btn-fill-horz-o:before,.btn-fill-horz-o:after{content:'';width:0;height:100%;opacity:0;position:absolute;top:0;z-index:-1}.btn-fill-horz-o:before{left:50%}.btn-fill-horz-o:after{right:50%}.btn-fill-horz-o:hover{color:#fff}.btn-fill-horz-o:hover:before,.btn-fill-horz-o:hover:after{width:50%;opacity:1}.btn-fill-horz-o.btn-dribbble:before,.btn-fill-horz-o.btn-dribbble:after{background-color:#E84F89}.btn-fill-horz-o.btn-dribbble:hover{border-color:#E84F89}.btn-fill-horz{background-color:#e5e5e5;border:1px solid #e5e5e5;color:#a6a6a6;overflow:hidden}.btn-fill-horz:before,.btn-fill-horz:after{content:'';width:0;height:100%;opacity:0;position:absolute;top:0;z-index:-1}.btn-fill-horz:before{left:50%}.btn-fill-horz:after{right:50%}.btn-fill-horz:hover{color:#fff}.btn-fill-horz:hover:before,.btn-fill-horz:hover:after{width:50%;opacity:1}.btn-fill-horz.btn-dribbble:before,.btn-fill-horz.btn-dribbble:after{background-color:#E84F89}.btn-fill-horz.btn-dribbble:hover{border-color:#E84F89}
+﻿/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+@import url(over-list.css);
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+body {
+  margin: 0
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline
+}
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+[hidden],
+template {
+  display: none
+}
+a {
+  background-color: transparent
+}
+a:active,
+a:hover {
+  outline: 0
+}
+abbr[title] {
+  border-bottom: 1px dotted
+}
+b,
+strong {
+  font-weight: bold
+}
+dfn {
+  font-style: italic
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0
+}
+mark {
+  background: #ff0;
+  color: #000
+}
+small {
+  font-size: 80%
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+sup {
+  top: -0.5em
+}
+sub {
+  bottom: -0.25em
+}
+img {
+  border: 0
+}
+svg:not(:root) {
+  overflow: hidden
+}
+figure {
+  margin: 1em 40px
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0
+}
+pre {
+  overflow: auto
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0
+}
+button {
+  overflow: visible
+}
+button,
+select {
+  text-transform: none
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer
+}
+button[disabled],
+html input[disabled] {
+  cursor: default
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0
+}
+input {
+  line-height: normal
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em
+}
+legend {
+  border: 0;
+  padding: 0
+}
+textarea {
+  overflow: auto
+}
+optgroup {
+  font-weight: bold
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+td,
+th {
+  padding: 0
+}
+:root {
+  font-size: 16px
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  box-sizing: inherit
+}
+*:focus {
+  outline: none
+}
+.bold {
+  font-weight: bold;
+  font-size: 1rem
+}
+html:before {
+  content: '';
+  display: none;
+  background: url("../images/svg/check-icon.svg"), url("../images/svg/jeudi-on.svg"), url("../images/svg/vendredi-on.svg")
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0
+}
+body {
+  font-family: "Helvetica Neue", Arial Narrow, helvetica, sans-serif;
+  background: #f4f8ff;
+  box-sizing: border-box;
+  color: #56595F
+}
+body.washere:before {
+  content: 'Il semblerais que vous ayez déjà effectué une inscription';
+  position: absolute;
+  z-index: 12;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.6);
+  margin: 1em;
+  color: #fff;
+  animation: disapear 3s ease;
+  opacity: 0;
+  border-radius: 26px
+}
+figcaption {
+  text-indent: -99999px;
+  color: transparent;
+  height: 0
+}
+input {
+  outline: none
+}
+p {
+  line-height: 26px
+}
+h1,
+h3,
+h4,
+h5 {
+  font-family: "Helvetica Neue", Arial Narrow, helvetica, sans-serif
+}
+h2 {
+  font-family: "Helvetica Neue", Arial Narrow, helvetica, sans-serif
+}
+h4,
+h5 {
+  font-weight: 600;
+  color: #9aa6c1;
+  font-size: 16px
+}
+h5 {
+  text-align: left
+}
+ul {
+  list-style: none;
+  padding: 0
+}
+form {
+  position: relative
+}
+fieldset {
+  border: none
+}
+header h3 {
+  text-align: left;
+  padding: 1em 0 !important;
+  padding-right: 1em !important;
+  background-color: #fbfcfe;
+  float: left;
+  position: absolute;
+  margin-top: -65px
+}
+.place header h3 {
+  margin-top: -60px
+}
+.container {
+  width: 100%;
+  float: left
+}
+.header {
+  height: 200px;
+  width: 100%;
+  float: left;
+  background: rgba(234, 76, 137, 0.8) url("../images/background.png") no-repeat center center;
+  background-size: cover;
+  text-align: center
+}
+.header .header__content {
+  max-width: 550px;
+  width: 100%;
+  margin: auto
+}
+.header .header__content .content__main-visual {
+  clear: both;
+  display: block;
+  width: 100%;
+  max-width: 160px;
+  height: 150px;
+  margin: auto;
+  position: relative
+}
+.header .header__content .visual__shadows {
+  width: 100%;
+  max-width: 80px;
+  height: 80px;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 100%;
+  box-shadow: 0 0 0 1.2em rgba(255, 255, 255, 0.4), 0 0 0 0.6em rgba(255, 255, 255, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0
+}
+.header .header__content .content__secondary-visual {
+  background: #f4f8ff;
+  width: 100%;
+  max-width: 80px;
+  margin: 10px auto;
+  padding: 1em;
+  border-radius: 100%;
+  z-index: 2;
+  position: relative
+}
+.container__inscription {
+  width: 100%;
+  min-height: 200px;
+  background: #f4f8ff;
+  float: left;
+  position: relative;
+  z-index: 1;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(0, 0, 0, 0.1)
+}
+.container__inscription .card__wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: auto
+}
+.inscription-card {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  float: left;
+  padding: 15px 45px 45px;
+  margin: 45px auto;
+  background: #ffffff;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  text-align: center
+}
+@media all and (max-width: 800px) {
+  .inscription-card {
+    padding: 15px 0 45px
+  }
+}
+.inscription-card .card__header {
+  height: 75px;
+  float: left;
+  width: 100%
+}
+@media all and (max-width: 800px) {
+  .inscription-card .card__header {
+    padding: 0 16px
+  }
+}
+.inscription-card .card__header>* {
+  float: left;
+  display: block;
+  position: relative;
+  height: 100%
+}
+.inscription-card .card__header .header__visual-item--1 {
+  width: 20%;
+  top: -3px
+}
+.inscription-card .card__header .header__visual-item--2 {
+  width: 18%;
+  padding-left: 1%
+}
+@media all and (max-width: 800px) {
+  .inscription-card .card__header .header__visual-item--2 {
+    width: 16%;
+    padding-left: 0
+  }
+}
+.inscription-card .card__header .separator-x {
+  width: calc(60% - 22px);
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  margin: 0 16px
+}
+.inscription-card .card__header .separator-x:before,
+.inscription-card .card__header .separator-x:after {
+  content: " ";
+  display: table
+}
+.inscription-card .card__header .separator-x:after {
+  clear: both
+}
+.inscription-card .card__form,
+.inscription-card .well {
+  background: #fbfcfe;
+  border: 1px solid #dbe4f7;
+  padding: 45px;
+  float: left;
+  padding-top: 0;
+  width: 100%
+}
+@media all and (max-width: 800px) {
+  .inscription-card .card__form,
+  .inscription-card .well {
+    width: calc(100% - 16px);
+    margin-left: 8px
+  }
+}
+@media all and (max-width: 640px) {
+  .inscription-card .card__form,
+  .inscription-card .well {
+    width: 100%;
+    margin-left: 0;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 16px
+  }
+}
+.inscription-card .card__form header,
+.inscription-card .well header {
+  padding: 1.5em 0 !important
+}
+.inscription-card .card__form header h2,
+.inscription-card .card__form header h3,
+.inscription-card .well header h2,
+.inscription-card .well header h3 {
+  padding: 0;
+  line-height: 1.6
+}
+.inscription-card .card__form header h2,
+.inscription-card .well header h2 {
+  color: #606165;
+  font-weight: bold;
+  -webkit-margin-after: 0
+}
+.inscription-card .card__form header h4,
+.inscription-card .well header h4 {
+  -webkit-margin-before: 0;
+  font-size: 16px;
+  position: relative;
+  width: calc(100% + 6em);
+  left: -3em
+}
+.inscription-card .card__form .introduction img,
+.inscription-card .well .introduction img {
+  max-width: 100%
+}
+.inscription-card .card__form .introduction img.date,
+.inscription-card .well .introduction img.date {
+  width: 100px
+}
+.inscription-card .card__form .introduction .left-part,
+.inscription-card .well .introduction .left-part {
+  max-width: 70%;
+  float: left;
+  text-align: left
+}
+.inscription-card .card__form .introduction .left-part p,
+.inscription-card .well .introduction .left-part p {
+  margin-top: 15px
+}
+.inscription-card .card__form .intro p,
+.inscription-card .well .intro p {
+  margin-top: 15px;
+  text-align: left
+}
+.inscription-card .card__form .intro p:last-child,
+.inscription-card .well .intro p:last-child {
+  margin-bottom: 15px
+}
+.inscription-card .card__form .partenaires,
+.inscription-card .well .partenaires {
+  padding: 27.14286px 0;
+  width: 100%;
+  float: left
+}
+.inscription-card .card__form .partenaires header,
+.inscription-card .well .partenaires header {
+  padding: 0 !important;
+  margin: 0
+}
+.inscription-card .card__form .partenaires ul,
+.inscription-card .well .partenaires ul {
+  margin: 0;
+  width: 100%;
+  min-height: 120px;
+  padding: 1em 0;
+  clear: both;
+  float: left
+}
+.inscription-card .card__form .partenaires ul li,
+.inscription-card .well .partenaires ul li {
+  float: left;
+  width: 25%;
+  margin-top: calc(38px / 2)
+}
+.inscription-card .card__form .partenaires ul li img,
+.inscription-card .well .partenaires ul li img {
+  max-width: 100%;
+  width: 55%
+}
+.inscription-card .card__form .programme,
+.inscription-card .well .programme {
+  padding: 27.14286px 0;
+  width: 100%;
+  float: left
+}
+.inscription-card .card__form .programme header,
+.inscription-card .well .programme header {
+  padding: 0 !important;
+  margin: 0
+}
+.inscription-card .well {
+  margin-top: 1em;
+  padding: 38px
+}
+.inscription-card .well:not(:first-child) {
+  margin-top: 1em
+}
+.inscription-card .well a.btn {
+  margin: 1.5em auto .5em;
+  display: block;
+  line-height: 60px;
+  padding: 0
+}
+.inscription-card .well .well {
+  background: #fff !important;
+  padding: 46px;
+  margin-bottom: 24px
+}
+.inscription-card .form__infos {
+  float: left;
+  width: 100%;
+  padding: 1em 0
+}
+.inscription-card .form__infos p {
+  color: #474747;
+  font-weight: bold;
+  font-size: 14px
+}
+.inscription-card .form__dates {
+  width: 190px;
+  margin: auto;
+  padding: 0 0 45px
+}
+.inscription-card .form__dates label {
+  display: block;
+  float: left;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  padding: 0
+}
+.inscription-card .form__dates label:after {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 90px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 90px
+}
+.inscription-card .form__dates label[for="jeudi-25-juin"] {
+  background: url("../images/svg/jeudi-off.svg") no-repeat center center;
+  background-size: contain
+}
+.inscription-card .form__dates label[for="vendredi-26-juin"] {
+  background: url("../images/svg/vendredi-off.svg") no-repeat center center;
+  background-size: contain;
+  float: right
+}
+.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"] {
+  background: url("../images/svg/jeudi-on.svg") no-repeat center center;
+  background-size: contain
+}
+.inscription-card .form__dates input[id="jeudi-25-juin"]:checked ~ label[for="jeudi-25-juin"]:after {
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
+  animation: popIn .7s ease-in
+}
+.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"] {
+  background: url("../images/svg/vendredi-on.svg") no-repeat center center;
+  background-size: contain
+}
+.inscription-card .form__dates input[id="vendredi-26-juin"]:checked ~ label[for="vendredi-26-juin"]:after {
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
+  animation: popIn .7s ease-in
+}
+.inscription-card input[type="button"],
+.inscription-card a.btn {
+  width: 180px;
+  height: 60px;
+  background: transparent;
+  color: #dbe4f7;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+  appearance: none;
+  padding: 0;
+  margin: 45px auto 0;
+  cursor: pointer;
+  border: 1px solid #dbe4f7;
+  transition: border-color .3s ease, color .3s ease .1s, background .3s ease .2s
+}
+.inscription-card input[type="button"].activated,
+.inscription-card a.btn.activated {
+  border-color: #f4f8ff;
+  color: #fff;
+  background: #ea4c89
+}
+.inscription-card input[type="button"]:hover,
+.inscription-card a.btn:hover {
+  background: #e62c74;
+  border-color: #f4f8ff
+}
+.inscription-card a.btn {
+  border-color: #f4f8ff;
+  color: #fff;
+  background: #ea4c89;
+  padding: .6em;
+  text-decoration: none;
+  margin: .5em auto
+}
+.inscription-card .time-group {
+  text-align: left;
+  width: 100%;
+  float: left;
+  font-size: 20px;
+  margin: 1em auto
+}
+.inscription-card .time-group:first-child {
+  margin-top: 0
+}
+.inscription-card .time-group:last-child {
+  margin-bottom: 0
+}
+.inscription-card .time-group strong,
+.inscription-card .time-group p {
+  float: left
+}
+.inscription-card .time-group strong {
+  color: #ea4c89
+}
+.inscription-card footer {
+  display: block;
+  float: left;
+  width: 100%;
+  margin: 1em auto 0
+}
+.inscription-card footer a {
+  color: #9AA6C1;
+  text-decoration: none;
+  margin-top: 2em;
+  display: block;
+  margin-bottom: 0
+}
+.inscription-card .subscribed-zone {
+  float: left;
+  width: 100%
+}
+.inscription-card #total-subscriber {
+  opacity: 0;
+  transition: opacity .1s ease
+}
+.inscription-card #load .card__form {
+  min-height: 280px
+}
+.inscription-card #load .card__form .loader {
+  top: 110px
+}
+.icon-dribbble {
+  background: url("../images/svg/dribbble-icon.svg") no-repeat center center;
+  background-size: 37%
+}
+.icon-email {
+  background: url("../images/svg/mail-icon.svg") no-repeat center center;
+  background-size: 37%
+}
+.separator-x {
+  height: 1px !important;
+  width: 100%;
+  display: block;
+  float: left;
+  background: #dbe4f7
+}
+.separator-x.big-space {
+  margin: 1.6em auto
+}
+.inscription-card a.btn {
+  margin: 2em auto 0;
+  display: block;
+  padding: .5em;
+  line-height: 2;
+  min-height: 44px
+}
+.oops {
+  float: left;
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.5em;
+  height: 50px
+}
+.hidden {
+  opacity: 0;
+  display: none;
+  transition: opacity .3s ease, display 0s ease .3s
+}
+.twisted {
+  transform: rotate(-90deg)
+}
+.loader {
+  height: 60px;
+  width: 60px;
+  margin: 0px auto;
+  position: relative;
+  animation: rotation .6s infinite linear;
+  border-left: 6px solid #DF3489;
+  border-right: 6px solid #DF3489;
+  border-bottom: 6px solid #DF3489;
+  border-top: 6px solid rgba(255, 255, 255, 0);
+  border-radius: 100%
+}
+.done:after {
+  content: '';
+  display: block;
+  height: 30px;
+  width: 90px;
+  position: absolute;
+  right: 0;
+  margin-right: -12px;
+  margin-top: 18px;
+  z-index: 2;
+  background: url("../images/svg/check-icon.svg") no-repeat center center;
+  background-size: 20%;
+  animation: popIn .7s ease-in
+}
+.tooltip {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -20px;
+  margin-top: 15px;
+  opacity: 0;
+  padding: 8px 16px;
+  pointer-events: none;
+  position: absolute;
+  z-index: 90;
+  width: auto;
+  transform: translateY(80px);
+  transition: all .25s ease-out;
+  border-radius: 4px
+}
+.tooltip a {
+  color: #fff;
+  text-decoration: none
+}
+.tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%
+}
+.tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid rgba(0, 0, 0, 0.75) 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0
+}
+.user-list li:hover img {
+  transform: scale(1.3);
+  transition: transform .3s ease
+}
+.user-list li:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px) translateZ(200px)
+}
+.v-center {
+  position: relative;
+  top: 14px
+}
+footer {
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding-bottom: 1.5em
+}
+footer small {
+  color: #dbe4f7
+}
+footer small a {
+  color: #dbe4f7;
+  text-decoration: none
+}
+.place {
+  text-align: left;
+  padding: 38px 0
+}
+.place p {
+  margin-bottom: 1em
+}
+.place img {
+  max-width: 40%;
+  display: block;
+  margin: 3em auto 1em
+}
+a[disabled],
+.inscription-card input[type="button"]:not(.activated) {
+  cursor: not-allowed
+}
+a[disabled]:hover,
+.inscription-card input[type="button"]:not(.activated):hover {
+  background: transparent;
+  color: #dbe4f7;
+  border: 1px solid #dbe4f7
+}
+.appear {
+  animation: appear .3s ease
+}
+@keyframes popIn {
+  0% {
+    transform: scale(0) rotate(-45deg)
+  }
+  66% {
+    transform: scale(1.2) rotate(15deg)
+  }
+  100% {
+    transform: scale(1) rotate(0deg)
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(359deg)
+  }
+}
+@keyframes disapear {
+  10% {
+    opacity: 1
+  }
+  90% {
+    opacity: 1
+  }
+  100% {
+    opacity: 0
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+.mt {
+  margin-top: 15px
+}
+.logos-list {
+  float: left;
+  padding: 0;
+  width: 100%;
+  text-align: center !important
+}
+.logos-list li {
+  display: block;
+  width: 25%;
+  min-height: 70px;
+  text-align: center !important
+}
+.logos-list li img {
+  height: 100%
+}
+img[src*="shopify.png"] {
+  position: relative;
+  top: -13px
+}
+img[src*="panda"] {
+  position: relative;
+  top: -5px;
+  max-width: 75px !important;
+  width: 100%;
+  padding: 0 1em
+}
+img[src*="sleek"] {
+  position: relative;
+  top: 0px;
+  max-width: 75px !important;
+  width: 100%;
+  padding: 0 1em
+}
+/*! Those buttons are from http://codepen.io/chrisdothtml/pen/waKBdM?editors=110 */
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer
+}
+.animate,
+.btn-swag,
+.btn-border-o:before,
+.btn-border-o:after,
+.btn-border:before,
+.btn-border:after,
+.btn-border-rev-o:before,
+.btn-border-rev-o:after,
+.btn-border-rev:before,
+.btn-border-rev:after,
+.btn-fill-vert-o:before,
+.btn-fill-vert-o:after,
+.btn-fill-vert:before,
+.btn-fill-vert:after,
+.btn-fill-horz-o:before,
+.btn-fill-horz-o:after,
+.btn-fill-horz:before,
+.btn-fill-horz:after {
+  transition: all 0.3s
+}
+.btn-swag {
+  display: inline-block;
+  line-height: 35px;
+  margin: 8px;
+  padding: 0 15px;
+  font-size: 15px;
+  position: relative;
+  opacity: .999;
+  border-radius: 3px
+}
+.btn-border-o {
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+  color: #B8B8B8
+}
+.btn-border-o:before,
+.btn-border-o:after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  box-sizing: content-box
+}
+.btn-border-o:before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+  top: -1px;
+  left: 0;
+  transition-delay: 0.05s
+}
+.btn-border-o:after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+  top: 0;
+  left: -1px
+}
+.btn-border-o:hover:before {
+  width: 100%
+}
+.btn-border-o:hover:after {
+  height: 100%
+}
+.btn-border-o.btn-dribbble:before,
+.btn-border-o.btn-dribbble:after {
+  border-color: #E84F89
+}
+.btn-border-o.btn-dribbble:hover {
+  color: #E84F89
+}
+.btn-border {
+  background-color: #e5e5e5;
+  border: 1px solid #E84F89;
+  color: #a6a6a6
+}
+.btn-border:before,
+.btn-border:after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  box-sizing: content-box
+}
+.btn-border:before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+  top: -1px;
+  left: 0;
+  transition-delay: 0.05s
+}
+.btn-border:after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+  top: 0;
+  left: -1px
+}
+.btn-border:hover {
+  background-color: transparent
+}
+.btn-border:hover:before {
+  width: 100%
+}
+.btn-border:hover:after {
+  height: 100%
+}
+.btn-border.btn-dribbble:before,
+.btn-border.btn-dribbble:after {
+  border-color: #E84F89
+}
+.btn-border.btn-dribbble:hover {
+  color: #E84F89
+}
+.btn-border-rev-o {
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+  color: #B8B8B8
+}
+.btn-border-rev-o:before,
+.btn-border-rev-o:after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  box-sizing: content-box
+}
+.btn-border-rev-o:before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+  top: -1px;
+  right: 0;
+  transition-delay: 0.05s
+}
+.btn-border-rev-o:after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+  bottom: 0;
+  left: -1px
+}
+.btn-border-rev-o:hover:before {
+  width: 100%
+}
+.btn-border-rev-o:hover:after {
+  height: 100%
+}
+.btn-border-rev-o.btn-dribbble:before,
+.btn-border-rev-o.btn-dribbble:after {
+  border-color: #E84F89
+}
+.btn-border-rev-o.btn-dribbble:hover {
+  color: #E84F89
+}
+.btn-border-rev {
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  color: #a6a6a6
+}
+.btn-border-rev:before,
+.btn-border-rev:after {
+  content: '';
+  border-style: solid;
+  position: absolute;
+  z-index: 5;
+  border-radius: 3px;
+  box-sizing: content-box
+}
+.btn-border-rev:before {
+  width: 0;
+  height: 100%;
+  border-width: 1px 0 1px 0;
+  top: -1px;
+  right: 0
+}
+.btn-border-rev:after {
+  width: 100%;
+  height: 0;
+  border-width: 0 1px 0 1px;
+  bottom: 0;
+  left: -1px;
+  transition-delay: 0.05s
+}
+.btn-border-rev:hover {
+  background-color: transparent
+}
+.btn-border-rev:hover:before {
+  width: 100%
+}
+.btn-border-rev:hover:after {
+  height: 100%
+}
+.btn-border-rev.btn-dribbble:before,
+.btn-border-rev.btn-dribbble:after {
+  border-color: #E84F89
+}
+.btn-border-rev.btn-dribbble:hover {
+  color: #E84F89
+}
+.btn-fill-vert-o {
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+  color: #B8B8B8;
+  overflow: hidden
+}
+.btn-fill-vert-o:before,
+.btn-fill-vert-o:after {
+  content: '';
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  z-index: -1
+}
+.btn-fill-vert-o:before {
+  top: 50%
+}
+.btn-fill-vert-o:after {
+  bottom: 50%
+}
+.btn-fill-vert-o:hover {
+  color: #fff
+}
+.btn-fill-vert-o:hover:before,
+.btn-fill-vert-o:hover:after {
+  height: 50%;
+  opacity: 1
+}
+.btn-fill-vert-o.btn-dribbble:before,
+.btn-fill-vert-o.btn-dribbble:after {
+  background-color: #E84F89
+}
+.btn-fill-vert-o.btn-dribbble:hover {
+  border-color: #E84F89
+}
+.btn-fill-vert {
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  color: #a6a6a6;
+  overflow: hidden
+}
+.btn-fill-vert:before,
+.btn-fill-vert:after {
+  content: '';
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  z-index: -1
+}
+.btn-fill-vert:before {
+  top: 50%
+}
+.btn-fill-vert:after {
+  bottom: 50%
+}
+.btn-fill-vert:hover {
+  color: #fff
+}
+.btn-fill-vert:hover:before,
+.btn-fill-vert:hover:after {
+  height: 50%;
+  opacity: 1
+}
+.btn-fill-vert.btn-dribbble:before,
+.btn-fill-vert.btn-dribbble:after {
+  background-color: #E84F89
+}
+.btn-fill-vert.btn-dribbble:hover {
+  border-color: #E84F89
+}
+.btn-fill-horz-o {
+  background-color: transparent;
+  border: 1px solid #d0d0d0;
+  color: #B8B8B8;
+  overflow: hidden
+}
+.btn-fill-horz-o:before,
+.btn-fill-horz-o:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1
+}
+.btn-fill-horz-o:before {
+  left: 50%
+}
+.btn-fill-horz-o:after {
+  right: 50%
+}
+.btn-fill-horz-o:hover {
+  color: #fff
+}
+.btn-fill-horz-o:hover:before,
+.btn-fill-horz-o:hover:after {
+  width: 50%;
+  opacity: 1
+}
+.btn-fill-horz-o.btn-dribbble:before,
+.btn-fill-horz-o.btn-dribbble:after {
+  background-color: #E84F89
+}
+.btn-fill-horz-o.btn-dribbble:hover {
+  border-color: #E84F89
+}
+.btn-fill-horz {
+  background-color: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  color: #a6a6a6;
+  overflow: hidden
+}
+.btn-fill-horz:before,
+.btn-fill-horz:after {
+  content: '';
+  width: 0;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1
+}
+.btn-fill-horz:before {
+  left: 50%
+}
+.btn-fill-horz:after {
+  right: 50%
+}
+.btn-fill-horz:hover {
+  color: #fff
+}
+.btn-fill-horz:hover:before,
+.btn-fill-horz:hover:after {
+  width: 50%;
+  opacity: 1
+}
+.btn-fill-horz.btn-dribbble:before,
+.btn-fill-horz.btn-dribbble:after {
+  background-color: #E84F89
+}
+.btn-fill-horz.btn-dribbble:hover {
+  border-color: #E84F89
+}
+
+
+
+@media all and (max-width: 640px){
+  *{
+    /*background: red;*/
+  }
+
+  .inscription-card .well .introduction .left-part {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .inscription-card .card__form .intro p, 
+  .inscription-card .well .intro p{
+    text-align: justify;
+  }
+
+  .inscription-card .user-list ul li {
+    display: block;
+    float: left;
+    width: 25%;
+    position: relative;
+    margin: 0 !important;
+    border-none: none
+  }
+  .inscription-card .user-list ul li:before,
+  .inscription-card .user-list ul li:after{
+    display: none;
+  }
+  .inscription-card .user-list ul li img{
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    border-none: none;
+  }
+  .inscription-card .well .introduction img.date {
+    margin-top: 3em;
+  }
+
+  .inscription-card .well:not(:first-child) {
+    margin-top: 0em;
+  }
+
+  .inscription-card .well{
+    padding: 24px;
+  }
+  
+  .inscription-card .well .well {
+    padding: 18px;
+    margin-bottom: 24px;
+  }
+  header h3 {
+    text-align: left;
+    padding: .5em 0 !important;
+    line-height: 0 !important;
+  }
+
+  .inscription-card .well .programme {
+    margin-bottom: 3em;
+    padding-top: 0;
+  }
+
+  .no-mobile{
+    display: none;
+  }
+
+}
