@@ -39,7 +39,7 @@
   margin-left: -2px;
   border-radius: 100%;
 }
-.inscription-card .user-list ul li:nth-child(6), .inscription-card .user-list ul li:nth-child(15), .inscription-card .user-list ul li:nth-child(24), .inscription-card .user-list ul li:nth-child(33), .inscription-card .user-list ul li:nth-child(42), .inscription-card .user-list ul li:nth-child(51), .inscription-card .user-list ul li:nth-child(60), .inscription-card .user-list ul li:nth-child(69), .inscription-card .user-list ul li:nth-child(78), .inscription-card .user-list ul li:nth-child(87), .inscription-card .user-list ul li:nth-child(96), .inscription-card .user-list ul li:nth-child(105), .inscription-card .user-list ul li:nth-child(114), .inscription-card .user-list ul li:nth-child(123), .inscription-card .user-list ul li:nth-child(132) {
+.inscription-card .user-list ul li:nth-child(6), .inscription-card .user-list ul li:nth-child(15), .inscription-card .user-list ul li:nth-child(24), .inscription-card .user-list ul li:nth-child(33), .inscription-card .user-list ul li:nth-child(42), .inscription-card .user-list ul li:nth-child(51), .inscription-card .user-list ul li:nth-child(60), .inscription-card .user-list ul li:nth-child(69), .inscription-card .user-list ul li:nth-child(78), .inscription-card .user-list ul li:nth-child(87), .inscription-card .user-list ul li:nth-child(96), .inscription-card .user-list ul li:nth-child(105), .inscription-card .user-list ul li:nth-child(114), .inscription-card .user-list ul li:nth-child(123), .inscription-card .user-list ul li:nth-child(132), .inscription-card .user-list ul li:nth-child(141) , .inscription-card .user-list ul li:nth-child(149) , .inscription-card .user-list ul li:nth-child(158), .inscription-card .user-list ul li:nth-child(167), .inscription-card .user-list ul li:nth-child(176), .inscription-card .user-list ul li:nth-child(185), .inscription-card .user-list ul li:nth-child(194) {
   margin-left: 64px;
 }
 .inscription-card .user-list ul li:nth-child(6):after, .inscription-card .user-list ul li:nth-child(15):after, .inscription-card .user-list ul li:nth-child(24):after, .inscription-card .user-list ul li:nth-child(33):after, .inscription-card .user-list ul li:nth-child(42):after, .inscription-card .user-list ul li:nth-child(51):after, .inscription-card .user-list ul li:nth-child(60):after, .inscription-card .user-list ul li:nth-child(69):after, .inscription-card .user-list ul li:nth-child(78):after, .inscription-card .user-list ul li:nth-child(87):after, .inscription-card .user-list ul li:nth-child(96):after, .inscription-card .user-list ul li:nth-child(105):after, .inscription-card .user-list ul li:nth-child(114):after, .inscription-card .user-list ul li:nth-child(123):after, .inscription-card .user-list ul li:nth-child(132):after {
@@ -48,3 +48,11 @@
 .inscription-card .user-list ul li:nth-child(1):after, .inscription-card .user-list ul li:nth-child(10):after, .inscription-card .user-list ul li:nth-child(19):after, .inscription-card .user-list ul li:nth-child(28):after, .inscription-card .user-list ul li:nth-child(37):after, .inscription-card .user-list ul li:nth-child(46):after, .inscription-card .user-list ul li:nth-child(55):after, .inscription-card .user-list ul li:nth-child(64):after, .inscription-card .user-list ul li:nth-child(73):after, .inscription-card .user-list ul li:nth-child(82):after, .inscription-card .user-list ul li:nth-child(91):after, .inscription-card .user-list ul li:nth-child(100):after, .inscription-card .user-list ul li:nth-child(109):after, .inscription-card .user-list ul li:nth-child(118):after, .inscription-card .user-list ul li:nth-child(127):after, .inscription-card .user-list ul li:nth-child(136):after {
   display: none;
 } 
+
+148. 165. 181. 198
+
+
+, .inscription-card .user-list ul li:nth-child(148)
+, .inscription-card .user-list ul li:nth-child(165)
+, .inscription-card .user-list ul li:nth-child(181)
+, .inscription-card .user-list ul li:nth-child(198)
